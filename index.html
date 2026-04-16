@@ -819,6 +819,64 @@ footer{
   .inno-vs-arrow{display:none;}
 }
 
+
+/* ======== CROSSHAIR MIRINO ======== */
+.crosshair-wrap{
+  position:relative;
+  width:200px;height:200px;
+  margin:2.5rem auto 0;
+  display:flex;align-items:center;justify-content:center;
+}
+.crosshair-svg{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  animation:ch-rotate 18s linear infinite;
+}
+@keyframes ch-rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.ch-r1{animation:ch-pulse 3s ease-in-out infinite;}
+.ch-r2{animation:ch-pulse 3s .4s ease-in-out infinite;}
+.ch-r3{animation:ch-pulse 3s .8s ease-in-out infinite;}
+.ch-r4{animation:ch-pulse-fast 1.8s ease-in-out infinite;}
+@keyframes ch-pulse{
+  0%,100%{opacity:.4;stroke-width:1.5;}
+  50%{opacity:1;stroke-width:2;}
+}
+@keyframes ch-pulse-fast{
+  0%,100%{opacity:.7;}
+  50%{opacity:1;stroke-width:3;}
+}
+.ch-dot{animation:ch-dot-blink 1.4s ease-in-out infinite;}
+@keyframes ch-dot-blink{0%,100%{opacity:1;r:4px;}50%{opacity:.5;r:3px;}}
+.ch-line{opacity:.7;}
+.crosshair-svg .ch-label-top,
+.crosshair-svg .ch-label-bottom,
+.crosshair-svg .ch-label-left,
+.crosshair-svg .ch-label-right{
+  /* controrotazione per tenerli leggibili */
+  animation:ch-counter-rotate 18s linear infinite;
+  transform-origin:100px 100px;
+}
+@keyframes ch-counter-rotate{from{transform:rotate(0deg);}to{transform:rotate(-360deg);}}
+
+.crosshair-center-text{
+  position:absolute;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1px;pointer-events:none;
+}
+.cct-top{font-family:'Plus Jakarta Sans',sans-serif;font-size:.55rem;font-weight:800;color:var(--green);letter-spacing:2px;text-transform:uppercase;opacity:.8;}
+.cct-main{font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:900;color:var(--green);letter-spacing:.5px;}
+.cct-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:.6rem;font-weight:700;color:rgba(77,184,138,0.6);letter-spacing:1px;}
+
+/* ======== RANKING MARQUEE ======== */
+.ranking-marquee{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.2rem;
+  margin-top:2rem;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:700;
+  color:rgba(77,184,138,0.5);letter-spacing:.5px;text-transform:uppercase;
+}
+.ranking-marquee span{white-space:nowrap;}
+.mq-sep{color:rgba(77,184,138,0.25);}
+
 /* ======== SCROLL ANIMATION ======== */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -833,7 +891,6 @@ footer{
     <span class="nav-logo-text">Que<span>Match</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="#metodologia">Metodologia</a></li>
     <li><a href="#innovazioni">Score & Ranking</a></li>
     <li><a href="#vantaggi">Vantaggi</a></li>
     <li><a href="#pricing">Prezzi</a></li>
@@ -862,7 +919,7 @@ footer{
   </p>
   <div class="hero-ctas">
     <a href="#prenota" class="btn-primary">Prenota una consulenza gratuita →</a>
-    <a href="#metodologia" class="btn-outline">Scopri il metodo</a>
+    <a href="#innovazioni" class="btn-outline">Scopri il metodo</a>
   </div>
   <div class="hero-stats">
     <div class="stat-item">
@@ -1020,110 +1077,59 @@ footer{
   </div>
 </section>
 
-<!-- METODOLOGIA QUEMATCH RANKING -->
-<section class="metodologia" id="metodologia">
-  <div class="container">
-    <div class="reveal" style="text-align:center;max-width:650px;margin:0 auto;">
-      <div class="section-label" style="justify-content:center;">Metodologia Proprietaria</div>
-      <h2 class="section-title">QueMatch Ranking™<br><span class="dim">il sistema che allinea le assunzioni</span></h2>
-      <p style="color:var(--muted);font-size:.95rem;line-height:1.8;margin-top:1rem;">Non un algoritmo. Un sistema scientifico sviluppato da professionisti della psicologia del lavoro e del recruiting per valutare ogni candidato in modo multidimensionale.</p>
-    </div>
-
-    <div class="ranking-engine reveal" style="margin-top:3rem;">
-      <div class="re-header">
-        <div class="re-title-block">
-          <h2>QueMatch Ranking™ Engine</h2>
-          <p>Quattro dimensioni · Score composito · Raccomandazione finale</p>
-        </div>
-        <div class="re-badge">Metodologia Proprietaria</div>
-      </div>
-
-      <div class="re-pillars">
-        <div class="pillar">
-          
-          <div class="pillar-label">Dimensione 1</div>
-          <div class="pillar-name">Skill Match</div>
-          <div class="pillar-desc">Valutazione oggettiva delle competenze tecniche richieste dalla posizione. Include background, certificazioni, esperienze misurabili.</div>
-        </div>
-        <div class="pillar">
-          
-          <div class="pillar-label">Dimensione 2</div>
-          <div class="pillar-name">Cultural Fit</div>
-          <div class="pillar-desc">Analisi della compatibilità valoriale con l'azienda. Stile di lavoro, propensione al team, attitudine all'autonomia o alla struttura.</div>
-        </div>
-        <div class="pillar">
-          
-          <div class="pillar-label">Dimensione 3</div>
-          <div class="pillar-name">Soft Power</div>
-          <div class="pillar-desc">Assessment psicoattitudinale delle competenze trasversali: comunicazione, leadership situazionale, resilienza, gestione del conflitto.</div>
-        </div>
-        <div class="pillar">
-          
-          <div class="pillar-label">Dimensione 4</div>
-          <div class="pillar-name">Readiness Index</div>
-          <div class="pillar-desc">Motivazione reale, disponibilità effettiva, aspettative economiche allineate e proiezione di crescita nel ruolo specifico.</div>
-        </div>
-      </div>
-
-      <div class="re-score-demo">
-        
-        </div>
-        <div class="score-example">
-          <h3>Esempio: candidato valutato</h3>
-          <div class="example-candidate">
-            <div class="ex-header">
-              <div class="ex-avatar">MR</div>
-              <div>
-                <div class="ex-name">Martina R.</div>
-                <div class="ex-role">Sales Manager · 6 anni B2B</div>
-              </div>
-            </div>
-            <div class="ex-dimensions">
-              <div class="ex-dim">
-                <span class="ex-dim-label">Skill Match</span>
-                <div class="ex-dim-bar"><div class="ex-dim-fill fill-skills" style="width:95%"></div></div>
-                <span class="ex-dim-val" style="color:var(--green)">95</span>
-              </div>
-              <div class="ex-dim">
-                <span class="ex-dim-label">Cultural Fit</span>
-                <div class="ex-dim-bar"><div class="ex-dim-fill fill-culture" style="width:88%"></div></div>
-                <span class="ex-dim-val" style="color:#6B9FE4">88</span>
-              </div>
-              <div class="ex-dim">
-                <span class="ex-dim-label">Soft Power</span>
-                <div class="ex-dim-bar"><div class="ex-dim-fill fill-soft" style="width:90%"></div></div>
-                <span class="ex-dim-val" style="color:var(--gold)">90</span>
-              </div>
-              <div class="ex-dim">
-                <span class="ex-dim-label">Readiness</span>
-                <div class="ex-dim-bar"><div class="ex-dim-fill fill-avail" style="width:85%"></div></div>
-                <span class="ex-dim-val" style="color:var(--green-light)">85</span>
-              </div>
-            </div>
-            <div class="ex-total">
-              <div>
-                <div class="ex-total-label">QMScore™ Finale</div>
-                <div style="font-size:.75rem;color:var(--muted);">Nessun dealbreaker attivato</div>
-              </div>
-              <div>
-                <span class="ex-total-score">91.25</span>
-                <span class="ex-verdict"> CONSIGLIATO</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- INNOVAZIONI QUEMATCH -->
 <section class="innovazioni" id="innovazioni">
   <div class="container">
-    <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;max-width:780px;margin:0 auto;">
       <div class="section-label" style="justify-content:center;">Le innovazioni QueMatch</div>
-      <h2 class="section-title">Due strumenti che il<br><span class="dim">recruiting tradizionale non ha.</span></h2>
-      <p style="color:var(--muted);font-size:1rem;line-height:1.85;margin-top:1rem;">Le agenzie classiche ti mandano CV. QueMatch ti consegna due strumenti proprietari che trasformano una decisione opaca in una scelta supportata da dati — personalizzati sulla tua azienda, non su un template generico.</p>
+      <h2 class="section-title">Per assunzioni da cecchino.<br><span class="dim">Due strumenti che il recruiting tradizionale non ha.</span></h2>
+
+      <!-- MIRINO ANIMATO SVG -->
+      <div class="crosshair-wrap" aria-hidden="true">
+        <svg class="crosshair-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- cerchi concentrici -->
+          <circle class="ch-ring ch-r1" cx="100" cy="100" r="80" fill="none" stroke="rgba(77,184,138,0.18)" stroke-width="1.5"/>
+          <circle class="ch-ring ch-r2" cx="100" cy="100" r="58" fill="none" stroke="rgba(77,184,138,0.28)" stroke-width="1.5"/>
+          <circle class="ch-ring ch-r3" cx="100" cy="100" r="36" fill="none" stroke="rgba(77,184,138,0.45)" stroke-width="2"/>
+          <circle class="ch-ring ch-r4" cx="100" cy="100" r="14" fill="none" stroke="var(--green)" stroke-width="2.5"/>
+          <!-- punto centrale -->
+          <circle class="ch-dot" cx="100" cy="100" r="4" fill="var(--green)"/>
+          <!-- linee a croce — con gap al centro -->
+          <line class="ch-line" x1="100" y1="10"  x2="100" y2="82"  stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
+          <line class="ch-line" x1="100" y1="118" x2="100" y2="190" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
+          <line class="ch-line" x1="10"  y1="100" x2="82"  y2="100" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
+          <line class="ch-line" x1="118" y1="100" x2="190" y2="100" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- tacche diagonali agli angoli -->
+          <line class="ch-tick" x1="26" y1="26" x2="38" y2="38" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="ch-tick" x1="174" y1="26" x2="162" y2="38" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="ch-tick" x1="26" y1="174" x2="38" y2="162" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="ch-tick" x1="174" y1="174" x2="162" y2="162" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- label QueMatch Ranking -->
+          <text class="ch-label-top" x="100" y="6" text-anchor="middle" fill="rgba(77,184,138,0.7)" font-family="Plus Jakarta Sans, sans-serif" font-size="6" font-weight="700" letter-spacing="1.5">QUEMATCH RANKING™</text>
+          <text class="ch-label-right" x="196" y="102" text-anchor="end" fill="rgba(77,184,138,0.5)" font-family="Plus Jakarta Sans, sans-serif" font-size="5.5" font-weight="700" letter-spacing="1">RANKING™</text>
+          <text class="ch-label-bottom" x="100" y="199" text-anchor="middle" fill="rgba(77,184,138,0.7)" font-family="Plus Jakarta Sans, sans-serif" font-size="6" font-weight="700" letter-spacing="1.5">QUEMATCH RANKING™</text>
+          <text class="ch-label-left" x="4" y="102" text-anchor="start" fill="rgba(77,184,138,0.5)" font-family="Plus Jakarta Sans, sans-serif" font-size="5.5" font-weight="700" letter-spacing="1">RANKING™</text>
+        </svg>
+        <!-- testo centrale sovrapposto -->
+        <div class="crosshair-center-text">
+          <span class="cct-top">QueMatch</span>
+          <span class="cct-main">Ranking™</span>
+          <span class="cct-sub">Score™</span>
+        </div>
+      </div>
+
+      <!-- Ripetizione brand orizzontale -->
+      <div class="ranking-marquee" aria-hidden="true">
+        <span>QueMatch Ranking™</span><span class="mq-sep">·</span>
+        <span>QueMatch Score™</span><span class="mq-sep">·</span>
+        <span>QueMatch Ranking™</span><span class="mq-sep">·</span>
+        <span>QueMatch Score™</span><span class="mq-sep">·</span>
+        <span>QueMatch Ranking™</span><span class="mq-sep">·</span>
+        <span>QueMatch Score™</span>
+      </div>
+
+      <p style="color:var(--muted);font-size:1rem;line-height:1.85;margin-top:2rem;">Le agenzie classiche ti mandano CV. QueMatch ti consegna <strong style="color:var(--white);">QueMatch Score™</strong> e <strong style="color:var(--white);">QueMatch Ranking™</strong> — due strumenti proprietari che trasformano una decisione opaca in una scelta supportata da dati, calibrati sulle esigenze uniche della tua azienda.</p>
     </div>
 
     <!-- DUE CARD AFFIANCATE -->
@@ -1193,7 +1199,7 @@ footer{
           <p class="inno-subtitle">La classifica che ti fa partire dal primo</p>
         </div>
         <div class="inno-body">
-          <p class="inno-desc">Una volta calcolati gli Score, QueMatch ordina i candidati della shortlist in una classifica relativa: dal più adatto al meno adatto, per quella posizione, in quel momento. <strong style="color:var(--white);">Il risultato è immediato</strong>: sai con chi iniziare, sai chi tenere in riserva, sai chi non chiamare affatto. Zero colloqui esplorativi inutili. Zero riunioni di allineamento interno su profili che non andrebbero mai avanti.</p>
+          <p class="inno-desc">Il <strong style="color:var(--white);">QueMatch Ranking™</strong> ordina i candidati della shortlist in una classifica relativa: dal più adatto al meno adatto, per quella posizione, in quel contesto aziendale. <strong style="color:var(--white);">Il risultato è immediato</strong>: sai con chi iniziare, sai chi tenere in riserva, sai chi non chiamare affatto. Il <strong style="color:var(--white);">QueMatch Ranking™</strong> elimina zero colloqui esplorativi inutili e le riunioni di allineamento interno su profili che non andrebbero mai avanti — è la bussola che ti porta al candidato giusto al primo colloquio.</p>
 
           <div class="inno-vs-box">
             <div class="inno-vs-item bad">
@@ -1203,7 +1209,7 @@ footer{
             <div class="inno-vs-arrow">→</div>
             <div class="inno-vs-item good">
               <div class="inno-vs-label">QueMatch Ranking™</div>
-              <div class="inno-vs-text">3–5 profili ordinati per priorità. Parti dal primo. Se va bene, sei già a posto. Se no, hai ancora la lista.</div>
+              <div class="inno-vs-text">3–5 profili ordinati per priorità dal QueMatch Ranking™. Parti dal primo. Se va bene, sei già a posto. Se no, hai ancora la lista.</div>
             </div>
           </div>
 
@@ -1257,7 +1263,7 @@ footer{
         <div class="inno-together-text">
           <div class="section-label">Score + Ranking insieme</div>
           <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:1rem;">Il candidato giusto al primo colloquio. Non al decimo.</h3>
-          <p style="color:var(--muted);font-size:.95rem;line-height:1.85;">Lo Score ti dice <em style="color:var(--white);">quanto vale</em> ogni candidato per te. Il Ranking ti dice <em style="color:var(--white);">da dove partire</em>. Insieme eliminano il problema più costoso del recruiting moderno: i colloqui di chiusura inutili, i round infiniti di confronto interno, le settimane perse su profili che non sarebbero mai stati assunti. Con QueMatch arrivi al colloquio decisivo già sapendo chi hai davanti — e perché.</p>
+          <p style="color:var(--muted);font-size:.95rem;line-height:1.85;">Il <strong style="color:var(--white);">QueMatch Score™</strong> ti dice quanto vale ogni candidato per te — su misura, non su template. Il <strong style="color:var(--white);">QueMatch Ranking™</strong> ti dice da dove partire. Insieme, <strong style="color:var(--white);">QueMatch Score™</strong> e <strong style="color:var(--white);">QueMatch Ranking™</strong> eliminano il problema più costoso del recruiting: i colloqui inutili, i round infiniti, le settimane perse su profili che non sarebbero mai stati assunti.</p>
           <a href="#prenota" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Scopri come funziona per la tua azienda →</a>
         </div>
         <div class="inno-together-stats">
