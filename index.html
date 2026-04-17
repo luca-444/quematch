@@ -1557,31 +1557,31 @@ footer{
       <div class="form-row">
         <div class="form-group">
           <label>Nome e Cognome *</label>
-          <input type="text" placeholder="Mario Rossi">
+          <input id="qm-nome" type="text" placeholder="Mario Rossi">
         </div>
         <div class="form-group">
           <label>Email aziendale *</label>
-          <input type="email" placeholder="mario@azienda.it">
+          <input id="qm-email" type="email" placeholder="mario@azienda.it">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label>Azienda</label>
-          <input type="text" placeholder="Nome azienda">
+          <input id="qm-azienda" type="text" placeholder="Nome azienda">
         </div>
         <div class="form-group">
           <label>Telefono</label>
-          <input type="tel" placeholder="+39 333 000 0000">
+          <input id="qm-telefono" type="tel" placeholder="+39 333 000 0000">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label>Posizione da coprire</label>
-          <input type="text" placeholder="es. Responsabile Commerciale, Developer, ...">
+          <input id="qm-posizione" type="text" placeholder="es. Responsabile Commerciale, Developer, ...">
         </div>
         <div class="form-group">
           <label>Urgenza</label>
-          <select>
+          <select id="qm-urgenza">
             <option>Entro 2 settimane</option>
             <option>Entro 1 mese</option>
             <option>Entro 2-3 mesi</option>
@@ -1591,12 +1591,12 @@ footer{
       </div>
       <div class="form-group full">
         <label>Note aggiuntive (facoltativo)</label>
-        <textarea placeholder="Raccontaci brevemente la posizione, il contesto aziendale o qualsiasi dettaglio utile..."></textarea>
+        <textarea id="qm-note" placeholder="Raccontaci brevemente la posizione, il contesto aziendale o qualsiasi dettaglio utile..."></textarea>
       </div>
-      <button class="form-submit">Prenota la Chiamata Gratuita →</button>
+      <button class="form-submit" id="qm-submit">Prenota la Chiamata Gratuita →</button>
     </div>
     <div class="booking-alt">
-      Preferisci scrivere? <a href="/cdn-cgi/l/email-protection#d7beb9b1b897a6a2b2bab6a3b4bff9bea3"><span class="__cf_email__" data-cfemail="f39a9d959cb38286969e9287909bdd9a87">[email&#160;protected]</span></a> · Risposta garantita entro 4h lavorative.
+      Preferisci scrivere? <a href="mailto:info@quematch.it">info@quematch.it</a> · Risposta garantita entro 4h lavorative.
     </div>
   </div>
 </section>
@@ -1677,7 +1677,20 @@ footer{
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+// ─── EmailJS Config ───────────────────────────────────────────────────────────
+// 1. Vai su https://www.emailjs.com/ e crea un account gratuito
+// 2. Crea un "Email Service" (Gmail, SMTP, ecc.) → copia il SERVICE_ID
+// 3. Crea un "Email Template" con le variabili sotto → copia il TEMPLATE_ID
+// 4. Vai su Account > API Keys → copia la PUBLIC_KEY
+// 5. Sostituisci i tre valori qui sotto con i tuoi reali
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // es. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // es. 'template_xyz456'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // es. 'xAbCdEfGhIjK'
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 // FAQ toggle
 function toggleFaq(el) {
   const item = el.parentElement;
@@ -1719,16 +1732,49 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Form submit placeholder
-document.querySelector('.form-submit').addEventListener('click', function() {
-  const name = document.querySelector('input[type="text"]').value;
-  if (!name.trim()) {
-    alert('Inserisci il tuo nome per procedere.');
-    return;
+// ─── Form Submit con EmailJS ──────────────────────────────────────────────────
+document.getElementById('qm-submit').addEventListener('click', async function() {
+  const nome     = document.getElementById('qm-nome').value.trim();
+  const email    = document.getElementById('qm-email').value.trim();
+  const azienda  = document.getElementById('qm-azienda').value.trim();
+  const telefono = document.getElementById('qm-telefono').value.trim();
+  const posizione= document.getElementById('qm-posizione').value.trim();
+  const urgenza  = document.getElementById('qm-urgenza').value;
+  const note     = document.getElementById('qm-note').value.trim();
+
+  if (!nome) { alert('Inserisci il tuo nome per procedere.'); return; }
+  if (!email) { alert('Inserisci la tua email aziendale.'); return; }
+
+  const btn = this;
+  btn.textContent = 'Invio in corso...';
+  btn.disabled = true;
+
+  const templateParams = {
+    to_email:   'info@quematch.it',
+    from_name:  nome,
+    from_email: email,
+    azienda:    azienda  || '(non specificata)',
+    telefono:   telefono || '(non specificato)',
+    posizione:  posizione|| '(non specificata)',
+    urgenza:    urgenza,
+    note:       note     || '(nessuna nota)',
+    data_ora:   new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' }),
+  };
+
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+    btn.textContent = '✓ Richiesta inviata — ti contatteremo entro 4h lavorative';
+    btn.style.background = 'var(--green-dark)';
+    // Reset form
+    ['qm-nome','qm-email','qm-azienda','qm-telefono','qm-posizione','qm-note'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+  } catch(err) {
+    console.error('EmailJS error:', err);
+    btn.textContent = '✕ Errore invio — riprova o scrivi a info@quematch.it';
+    btn.style.background = 'var(--red-soft)';
+    btn.disabled = false;
   }
-  this.textContent = ' Richiesta inviata — ti contatteremo entro 4h lavorative';
-  this.style.background = 'var(--green-dark)';
-  this.disabled = true;
 });
 </script>
 </body>
