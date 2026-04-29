@@ -1051,14 +1051,12 @@ footer{
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-// ─── EmailJS Config ───────────────────────────────────────────────────────────
 const EMAILJS_SERVICE_ID  = 'service_kwmchtm';
 const EMAILJS_TEMPLATE_ID = 'template_tb8rhfr';
 const EMAILJS_PUBLIC_KEY  = 'ikixzONAnrFOfzdtp';
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-// FAQ toggle
 function toggleFaq(el) {
   const item = el.parentElement;
   const isOpen = item.classList.contains('open');
@@ -1066,19 +1064,16 @@ function toggleFaq(el) {
   if (!isOpen) item.classList.add('open');
 }
 
-// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Nav scroll
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.background =
     window.scrollY > 80 ? 'rgba(13,15,18,0.97)' : 'rgba(13,15,18,0.85)';
 });
 
-// ─── Form Submit ──────────────────────────────────────────────────────────────
 document.getElementById('qm-submit').addEventListener('click', async function() {
   const nome      = document.getElementById('qm-nome').value.trim();
   const email     = document.getElementById('qm-email').value.trim();
@@ -1086,7 +1081,7 @@ document.getElementById('qm-submit').addEventListener('click', async function() 
   const telefono  = document.getElementById('qm-telefono').value.trim();
   const posizione = document.getElementById('qm-posizione').value.trim();
   const urgenza   = document.getElementById('qm-urgenza').value;
-  const nota      = document.getElementById('qm-nota').value.trim();
+  const nota      = document.getElementById('qm-note').value.trim(); // ← legge qm-note (corretto)
 
   if (!nome)  { alert('Inserisci il tuo nome per procedere.'); return; }
   if (!email) { alert('Inserisci la tua email aziendale.'); return; }
@@ -1095,16 +1090,15 @@ document.getElementById('qm-submit').addEventListener('click', async function() 
   btn.textContent = 'Invio in corso...';
   btn.disabled = true;
 
-  // ⚠️ I nomi delle variabili corrispondono ESATTAMENTE ai placeholder del template EmailJS
   const templateParams = {
-    'Nome e Cognome':      nome,
-    'Email aziendale':     email,
-    'Azienda':             azienda   || '(non specificata)',
-    'Telefono':            telefono  || '(non specificato)',
-    'Posizione da coprire': posizione || '(non specificata)',
-    'Urgenza':             urgenza,
-    'Note aggiuntive':     note      || '(nessuna nota)',
-    'tempo':               new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' }),
+    from_name:  nome,
+    from_email: email,
+    azienda:    azienda   || '(non specificata)',
+    telefono:   telefono  || '(non specificato)',
+    posizione:  posizione || '(non specificata)',
+    urgenza:    urgenza,
+    nota:       nota      || '(nessuna nota)',   // ← combacia con {{nota}} nel template
+    tempo:      new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' }),
   };
 
   try {
