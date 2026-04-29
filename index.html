@@ -268,109 +268,6 @@ nav{
 .score-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;color:var(--green);margin-top:3px;}
 .rank-out{color:rgba(255,255,255,0.25);}
 
-/* ======== QUEMATCH RANKING METODOLOGIA ======== */
-.metodologia{background:var(--ink2);padding:6rem 2rem;}
-
-.ranking-engine{
-  margin-top:4rem;
-  background:var(--ink3);border-radius:24px;
-  border:1px solid rgba(77,184,138,0.15);
-  overflow:hidden;
-}
-.re-header{
-  background:linear-gradient(135deg,var(--ink) 0%,rgba(77,184,138,0.1) 100%);
-  padding:2.5rem 3rem;
-  display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid rgba(77,184,138,0.15);
-}
-.re-title-block h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:800;}
-.re-title-block p{font-size:.9rem;color:var(--muted);margin-top:.3rem;}
-.re-badge{
-  background:rgba(77,184,138,0.15);
-  border:1px solid rgba(77,184,138,0.3);
-  border-radius:100px;padding:.5rem 1.2rem;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;
-  color:var(--green);letter-spacing:.5px;text-transform:uppercase;
-}
-
-.re-pillars{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
-.pillar{
-  padding:2rem 1.5rem;
-  border-right:1px solid rgba(255,255,255,0.06);
-  position:relative;
-}
-.pillar:last-child{border-right:none;}
-.pillar-icon{font-size:1.8rem;margin-bottom:1rem;}
-.pillar-label{
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:.7rem;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;
-}
-.pillar-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;margin-bottom:.5rem;}
-.pillar-desc{font-size:.8rem;color:var(--muted);line-height:1.6;}
-.pillar-weight{
-  margin-top:1rem;
-  display:inline-block;
-  background:rgba(77,184,138,0.12);border:1px solid rgba(77,184,138,0.25);
-  border-radius:6px;padding:.2rem .6rem;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:700;color:var(--green);
-}
-
-.re-score-demo{
-  padding:2.5rem 3rem;
-  display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;
-}
-.score-formula h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.2rem;color:var(--muted);}
-.formula-block{
-  background:var(--ink2);border-radius:12px;padding:1.5rem;
-  border:1px solid rgba(77,184,138,0.1);
-  font-family:monospace;font-size:.85rem;line-height:2;
-}
-.formula-var{color:var(--green);}
-.formula-op{color:rgba(255,255,255,0.4);}
-.formula-comment{color:rgba(255,255,255,0.25);font-size:.75rem;}
-
-.score-example h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.2rem;color:var(--muted);}
-.example-candidate{
-  background:var(--ink2);border-radius:12px;padding:1.5rem;
-  border:1px solid rgba(77,184,138,0.15);
-}
-.ex-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
-.ex-avatar{
-  width:44px;height:44px;border-radius:10px;
-  background:linear-gradient(135deg,var(--green),var(--green-dark));
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--ink);font-size:1.1rem;
-}
-.ex-name{font-weight:600;font-size:.95rem;}
-.ex-role{font-size:.8rem;color:var(--muted);}
-.ex-dimensions{display:flex;flex-direction:column;gap:.7rem;}
-.ex-dim{display:flex;align-items:center;gap:.75rem;}
-.ex-dim-label{font-size:.8rem;color:var(--muted);width:100px;flex-shrink:0;}
-.ex-dim-bar{flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,0.06);}
-.ex-dim-fill{height:100%;border-radius:4px;}
-.fill-skills{background:var(--green);}
-.fill-culture{background:#6B9FE4;}
-.fill-soft{background:var(--gold);}
-.fill-avail{background:var(--green-light);}
-.ex-dim-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;width:30px;text-align:right;}
-.ex-total{
-  margin-top:1.2rem;padding-top:1rem;
-  border-top:1px solid rgba(255,255,255,0.08);
-  display:flex;align-items:center;justify-content:space-between;
-}
-.ex-total-label{font-size:.85rem;color:var(--muted);}
-.ex-total-score{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.8rem;font-weight:900;color:var(--green);}
-.ex-verdict{
-  display:inline-block;background:rgba(77,184,138,0.15);
-  border:1px solid rgba(77,184,138,0.3);
-  border-radius:6px;padding:.2rem .7rem;
-  font-size:.75rem;font-weight:700;color:var(--green);margin-left:.5rem;
-  vertical-align:middle;
-}
-
 /* ======== VANTAGGI ======== */
 .vantaggi{padding:6rem 2rem;}
 .vantaggi-intro{
@@ -426,7 +323,6 @@ nav{
 .plan-price{margin-bottom:1.5rem;}
 .plan-price .amount{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.5rem;font-weight:900;color:var(--green);}
 .plan-price .period{font-size:.85rem;color:var(--muted);}
-.plan-price .note{font-size:.78rem;color:var(--muted);margin-top:.3rem;}
 .plan-divider{height:1px;background:rgba(255,255,255,0.07);margin:1.5rem 0;}
 .plan-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
 .plan-features li{display:flex;gap:.7rem;align-items:flex-start;font-size:.88rem;color:rgba(255,255,255,0.75);}
@@ -572,7 +468,7 @@ nav{
 .testi-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:700;}
 .testi-company{font-size:.75rem;color:var(--muted);}
 
-/* ======== APPUNTAMENTO / CTA ======== */
+/* ======== BOOKING ======== */
 .booking{
   padding:6rem 2rem;
   background:linear-gradient(135deg,var(--ink) 0%,rgba(77,184,138,0.06) 50%,var(--ink) 100%);
@@ -694,90 +590,41 @@ footer{
 
 /* ======== INNOVAZIONI ======== */
 .innovazioni{padding:6rem 2rem;background:var(--ink);}
-.inno-split{
-  display:grid;grid-template-columns:1fr 1fr;gap:2rem;
-  margin-top:4rem;
-}
-.inno-card{
-  border-radius:24px;overflow:hidden;
-  border:1px solid rgba(77,184,138,0.15);
-  display:flex;flex-direction:column;
-  transition:border-color .3s,transform .3s;
-}
+.inno-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:4rem;}
+.inno-card{border-radius:24px;overflow:hidden;border:1px solid rgba(77,184,138,0.15);display:flex;flex-direction:column;transition:border-color .3s,transform .3s;}
 .inno-card:hover{border-color:rgba(77,184,138,0.4);transform:translateY(-4px);}
 .inno-score{background:linear-gradient(160deg,rgba(77,184,138,0.07) 0%,var(--ink2) 50%);}
 .inno-ranking{background:linear-gradient(160deg,rgba(107,159,228,0.07) 0%,var(--ink2) 50%);}
-.inno-card-header{
-  padding:2rem 2rem 1.5rem;
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
-.inno-badge{
-  display:inline-block;
-  background:rgba(77,184,138,0.12);border:1px solid rgba(77,184,138,0.25);
-  border-radius:100px;padding:.2rem .75rem;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:.65rem;font-weight:800;
-  letter-spacing:1.5px;text-transform:uppercase;color:var(--green);
-  margin-bottom:.8rem;
-}
-.inno-badge-alt{
-  background:rgba(107,159,228,0.12);border-color:rgba(107,159,228,0.25);
-  color:#6B9FE4;
-}
-.inno-title{
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:900;
-  letter-spacing:-0.5px;margin-bottom:.3rem;
-}
+.inno-card-header{padding:2rem 2rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.06);}
+.inno-badge{display:inline-block;background:rgba(77,184,138,0.12);border:1px solid rgba(77,184,138,0.25);border-radius:100px;padding:.2rem .75rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:.8rem;}
+.inno-badge-alt{background:rgba(107,159,228,0.12);border-color:rgba(107,159,228,0.25);color:#6B9FE4;}
+.inno-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:900;letter-spacing:-0.5px;margin-bottom:.3rem;}
 .inno-subtitle{font-size:.85rem;color:var(--muted);font-weight:500;}
 .inno-body{padding:2rem;flex:1;display:flex;flex-direction:column;gap:1.5rem;}
 .inno-desc{font-size:.92rem;color:rgba(255,255,255,0.7);line-height:1.85;}
-
-/* VS box */
-.inno-vs-box{
-  display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:center;
-}
+.inno-vs-box{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:center;}
 .inno-vs-item{border-radius:12px;padding:1rem 1.1rem;}
-.inno-vs-item.bad{
-  background:rgba(224,90,58,0.07);border:1px solid rgba(224,90,58,0.15);
-}
-.inno-vs-item.good{
-  background:rgba(77,184,138,0.07);border:1px solid rgba(77,184,138,0.2);
-}
+.inno-vs-item.bad{background:rgba(224,90,58,0.07);border:1px solid rgba(224,90,58,0.15);}
+.inno-vs-item.good{background:rgba(77,184,138,0.07);border:1px solid rgba(77,184,138,0.2);}
 .inno-vs-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:.4rem;}
 .inno-vs-item.bad .inno-vs-label{color:var(--red-soft);}
 .inno-vs-item.good .inno-vs-label{color:var(--green);}
 .inno-vs-text{font-size:.78rem;color:var(--muted);line-height:1.6;}
 .inno-vs-arrow{font-size:1.2rem;color:var(--muted);text-align:center;}
-
-/* Score mini demo */
-.score-mini-demo,.rank-mini-demo{
-  background:var(--ink3);border-radius:14px;padding:1.4rem;
-  border:1px solid rgba(77,184,138,0.1);
-}
-.smd-header{
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;
-  color:var(--muted);margin-bottom:1rem;
-}
+.score-mini-demo,.rank-mini-demo{background:var(--ink3);border-radius:14px;padding:1.4rem;border:1px solid rgba(77,184,138,0.1);}
+.smd-header{font-family:'Plus Jakarta Sans',sans-serif;font-size:.75rem;font-weight:600;color:var(--muted);margin-bottom:1rem;}
 .smd-dims{display:flex;flex-direction:column;gap:.55rem;}
 .smd-dim{display:flex;align-items:center;gap:.75rem;}
 .smd-label{font-size:.75rem;color:var(--muted);width:90px;flex-shrink:0;}
 .smd-bar{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,0.06);}
 .smd-fill{height:100%;border-radius:3px;transition:width 1.5s ease;}
 .smd-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:700;width:26px;text-align:right;color:var(--white);}
-.smd-total{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-top:1rem;padding-top:.8rem;
-  border-top:1px solid rgba(255,255,255,0.07);
-}
+.smd-total{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,0.07);}
 .smd-total-label{font-size:.8rem;color:var(--muted);}
 .smd-total-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:900;color:var(--green);}
 .smd-note{font-size:.72rem;color:rgba(255,255,255,0.3);font-style:italic;margin-top:.75rem;line-height:1.5;}
-
-/* Ranking mini demo */
 .rmd-rows{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.75rem;}
-.rmd-row{
-  display:flex;align-items:center;gap:.9rem;
-  padding:.65rem .9rem;border-radius:9px;
-}
+.rmd-row{display:flex;align-items:center;gap:.9rem;padding:.65rem .9rem;border-radius:9px;}
 .rmd-top{background:rgba(77,184,138,0.1);border:1px solid rgba(77,184,138,0.2);}
 .rmd-mid{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);}
 .rmd-out{opacity:.4;}
@@ -788,29 +635,11 @@ footer{
 .rmd-tag-out{color:var(--muted);}
 .rmd-score{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:var(--green);}
 .rmd-score-mid{color:rgba(77,184,138,0.6);}
-
-/* Insieme */
-.inno-together{
-  margin-top:3rem;
-  background:linear-gradient(135deg,var(--ink2) 0%,rgba(77,184,138,0.06) 100%);
-  border-radius:24px;border:1px solid rgba(77,184,138,0.15);
-  overflow:hidden;
-}
-.inno-together-inner{
-  display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;
-  padding:3rem;
-}
-.inno-together-stats{
-  display:flex;flex-direction:column;gap:2rem;
-  padding-left:3rem;border-left:1px solid rgba(77,184,138,0.15);
-  min-width:180px;
-}
-.its-num{
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:900;
-  color:var(--green);line-height:1;
-}
+.inno-together{margin-top:3rem;background:linear-gradient(135deg,var(--ink2) 0%,rgba(77,184,138,0.06) 100%);border-radius:24px;border:1px solid rgba(77,184,138,0.15);overflow:hidden;}
+.inno-together-inner{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;padding:3rem;}
+.inno-together-stats{display:flex;flex-direction:column;gap:2rem;padding-left:3rem;border-left:1px solid rgba(77,184,138,0.15);min-width:180px;}
+.its-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:900;color:var(--green);line-height:1;}
 .its-label{font-size:.78rem;color:var(--muted);margin-top:.3rem;line-height:1.4;}
-
 @media(max-width:900px){
   .inno-split{grid-template-columns:1fr;}
   .inno-together-inner{grid-template-columns:1fr;}
@@ -819,65 +648,24 @@ footer{
   .inno-vs-arrow{display:none;}
 }
 
-
-/* ======== CROSSHAIR MIRINO ======== */
-.crosshair-wrap{
-  position:relative;
-  width:200px;height:200px;
-  margin:2.5rem auto 0;
-  display:flex;align-items:center;justify-content:center;
-}
-.crosshair-svg{
-  position:absolute;inset:0;
-  width:100%;height:100%;
-  animation:ch-rotate 18s linear infinite;
-}
+/* ======== CROSSHAIR ======== */
+.crosshair-wrap{position:relative;width:200px;height:200px;margin:2.5rem auto 0;display:flex;align-items:center;justify-content:center;}
+.crosshair-svg{position:absolute;inset:0;width:100%;height:100%;animation:ch-rotate 18s linear infinite;}
 @keyframes ch-rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
 .ch-r1{animation:ch-pulse 3s ease-in-out infinite;}
 .ch-r2{animation:ch-pulse 3s .4s ease-in-out infinite;}
 .ch-r3{animation:ch-pulse 3s .8s ease-in-out infinite;}
 .ch-r4{animation:ch-pulse-fast 1.8s ease-in-out infinite;}
-@keyframes ch-pulse{
-  0%,100%{opacity:.4;stroke-width:1.5;}
-  50%{opacity:1;stroke-width:2;}
-}
-@keyframes ch-pulse-fast{
-  0%,100%{opacity:.7;}
-  50%{opacity:1;stroke-width:3;}
-}
+@keyframes ch-pulse{0%,100%{opacity:.4;stroke-width:1.5;}50%{opacity:1;stroke-width:2;}}
+@keyframes ch-pulse-fast{0%,100%{opacity:.7;}50%{opacity:1;stroke-width:3;}}
 .ch-dot{animation:ch-dot-blink 1.4s ease-in-out infinite;}
 @keyframes ch-dot-blink{0%,100%{opacity:1;r:4px;}50%{opacity:.5;r:3px;}}
 .ch-line{opacity:.7;}
-.crosshair-svg .ch-label-top,
-.crosshair-svg .ch-label-bottom,
-.crosshair-svg .ch-label-left,
-.crosshair-svg .ch-label-right{
-  /* controrotazione per tenerli leggibili */
-  animation:ch-counter-rotate 18s linear infinite;
-  transform-origin:100px 100px;
-}
+.crosshair-svg .ch-label-top,.crosshair-svg .ch-label-bottom,.crosshair-svg .ch-label-left,.crosshair-svg .ch-label-right{animation:ch-counter-rotate 18s linear infinite;transform-origin:100px 100px;}
 @keyframes ch-counter-rotate{from{transform:rotate(0deg);}to{transform:rotate(-360deg);}}
-
-.crosshair-center-text{
-  position:absolute;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:1px;pointer-events:none;
-}
-.cct-top{font-family:'Plus Jakarta Sans',sans-serif;font-size:.55rem;font-weight:800;color:var(--green);letter-spacing:2px;text-transform:uppercase;opacity:.8;}
-.cct-main{font-family:'Plus Jakarta Sans',sans-serif;font-size:.95rem;font-weight:900;color:var(--green);letter-spacing:.5px;}
-.cct-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:.6rem;font-weight:700;color:rgba(77,184,138,0.6);letter-spacing:1px;}
-
-/* ======== RANKING MARQUEE ======== */
-.ranking-marquee{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.2rem;
-  margin-top:2rem;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:700;
-  color:rgba(77,184,138,0.5);letter-spacing:.5px;text-transform:uppercase;
-}
+.ranking-marquee{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.2rem;margin-top:2rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:700;color:rgba(77,184,138,0.5);letter-spacing:.5px;text-transform:uppercase;}
 .ranking-marquee span{white-space:nowrap;}
 .mq-sep{color:rgba(77,184,138,0.25);}
-
-/* ======== SCROLL ANIMATION ======== */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 </style>
@@ -922,22 +710,10 @@ footer{
     <a href="#innovazioni" class="btn-outline">Scopri il metodo</a>
   </div>
   <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-num">−70%</div>
-      <div class="stat-label">Costo per assunzione</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3×</div>
-      <div class="stat-label">Candidati più precisi</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">5gg</div>
-      <div class="stat-label">Prima shortlist</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">87%</div>
-      <div class="stat-label">Retention a 12 mesi</div>
-    </div>
+    <div class="stat-item"><div class="stat-num">−70%</div><div class="stat-label">Costo per assunzione</div></div>
+    <div class="stat-item"><div class="stat-num">3×</div><div class="stat-label">Candidati più precisi</div></div>
+    <div class="stat-item"><div class="stat-num">5gg</div><div class="stat-label">Prima shortlist</div></div>
+    <div class="stat-item"><div class="stat-num">87%</div><div class="stat-label">Retention a 12 mesi</div></div>
   </div>
 </section>
 
@@ -950,30 +726,10 @@ footer{
       <p class="section-sub">Ogni assunzione sbagliata costa mediamente 1–2 volte lo stipendio annuo. Le aziende italiane lo sanno — ma continuano a usare gli stessi strumenti di 20 anni fa.</p>
     </div>
     <div class="problema-grid reveal">
-      <div class="problema-card">
-        
-        <h3>Costo nascosto dell'assunzione errata</h3>
-        <p>Selezione, onboarding, formazione, tempo dei manager, bassa produttività durante il periodo di inserimento — i costi si accumulano silenziosamente.</p>
-        <div class="problema-cost">€ 18.000 – 45.000<span>costo medio stimato per un'assunzione errata (quadro/specialista)</span></div>
-      </div>
-      <div class="problema-card">
-        
-        <h3>Tempo perso in screening inefficace</h3>
-        <p>I responsabili HR leggono centinaia di CV per trovare 5 candidati validi. Il 78% del tempo è dedicato a profili inadatti che non superano il primo colloquio.</p>
-        <div class="problema-cost">40+ ore<span>spese in media per ogni posizione aperta</span></div>
-      </div>
-      <div class="problema-card">
-        
-        <h3>Il CV non dice abbastanza</h3>
-        <p>Le competenze tecniche si valutano. La compatibilità culturale, la motivazione reale e il potenziale di crescita no. I tool tradizionali ignorano il 70% di ciò che conta.</p>
-        <div class="problema-cost">1 su 3<span>neoassunti lascia entro 12 mesi per mismatch culturale</span></div>
-      </div>
-      <div class="problema-card">
-        
-        <h3>Il turnover distrugge la continuità</h3>
-        <p>Ogni persona che lascia porta via know-how, relazioni e continuità. Le PMI italiane soffrono in modo sproporzionato perché ogni risorsa conta doppio.</p>
-        <div class="problema-cost">−32%<span>di produttività media durante un periodo di vacancy non coperta</span></div>
-      </div>
+      <div class="problema-card"><h3>Costo nascosto dell'assunzione errata</h3><p>Selezione, onboarding, formazione, tempo dei manager, bassa produttività durante il periodo di inserimento — i costi si accumulano silenziosamente.</p><div class="problema-cost">€ 18.000 – 45.000<span>costo medio stimato per un'assunzione errata (quadro/specialista)</span></div></div>
+      <div class="problema-card"><h3>Tempo perso in screening inefficace</h3><p>I responsabili HR leggono centinaia di CV per trovare 5 candidati validi. Il 78% del tempo è dedicato a profili inadatti che non superano il primo colloquio.</p><div class="problema-cost">40+ ore<span>spese in media per ogni posizione aperta</span></div></div>
+      <div class="problema-card"><h3>Il CV non dice abbastanza</h3><p>Le competenze tecniche si valutano. La compatibilità culturale, la motivazione reale e il potenziale di crescita no. I tool tradizionali ignorano il 70% di ciò che conta.</p><div class="problema-cost">1 su 3<span>neoassunti lascia entro 12 mesi per mismatch culturale</span></div></div>
+      <div class="problema-card"><h3>Il turnover distrugge la continuità</h3><p>Ogni persona che lascia porta via know-how, relazioni e continuità. Le PMI italiane soffrono in modo sproporzionato perché ogni risorsa conta doppio.</p><div class="problema-cost">−32%<span>di produttività media durante un periodo di vacancy non coperta</span></div></div>
     </div>
   </div>
 </section>
@@ -987,37 +743,12 @@ footer{
         <h2 class="section-title">Dalla ricerca<br><span class="dim">alla firma</span><br>in modo chirurgico.</h2>
         <p style="color:var(--muted);font-size:.95rem;line-height:1.8;margin-top:1rem;">QueMatch non è una classica agenzia di ricerca. È un sistema di selezione con una metodologia proprietaria — il QueMatch Ranking — che trasforma dati oggettivi in decisioni di assunzione precise.</p>
         <div class="soluzione-steps">
-          <div class="step">
-            <div class="step-num">01</div>
-            <div class="step-content">
-              <h4>Analisi della posizione e del contesto aziendale</h4>
-              <p>Definiamo insieme competenze hard, soft, valori aziendali e deal-breaker. Input umano, output strutturato.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <div class="step-content">
-              <h4>Sourcing multisorgente e pre-screening QueMatch</h4>
-              <p>Ricerchiamo su tutte le piattaforme. Ogni candidato viene pre-valutato secondo le 4 dimensioni del Ranking prima ancora di contattarti.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <div class="step-content">
-              <h4>Shortlist commentata entro 5 giorni lavorativi</h4>
-              <p>Ricevi 3–5 profili con scheda QueMatch completa: punteggi, motivazioni, note psicoattitudinali e raccomandazione finale.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">04</div>
-            <div class="step-content">
-              <h4>Supporto a colloqui e negoziazione</h4>
-              <p>Ti affianchiamo nella fase finale. Strutturiamo i colloqui, gestiamo le aspettative e accompagniamo alla firma.</p>
-            </div>
-          </div>
+          <div class="step"><div class="step-num">01</div><div class="step-content"><h4>Analisi della posizione e del contesto aziendale</h4><p>Definiamo insieme competenze hard, soft, valori aziendali e deal-breaker. Input umano, output strutturato.</p></div></div>
+          <div class="step"><div class="step-num">02</div><div class="step-content"><h4>Sourcing multisorgente e pre-screening QueMatch</h4><p>Ricerchiamo su tutte le piattaforme. Ogni candidato viene pre-valutato secondo le 4 dimensioni del Ranking prima ancora di contattarti.</p></div></div>
+          <div class="step"><div class="step-num">03</div><div class="step-content"><h4>Shortlist commentata entro 5 giorni lavorativi</h4><p>Ricevi 3–5 profili con scheda QueMatch completa: punteggi, motivazioni, note psicoattitudinali e raccomandazione finale.</p></div></div>
+          <div class="step"><div class="step-num">04</div><div class="step-content"><h4>Supporto a colloqui e negoziazione</h4><p>Ti affianchiamo nella fase finale. Strutturiamo i colloqui, gestiamo le aspettative e accompagniamo alla firma.</p></div></div>
         </div>
       </div>
-      <!-- Demo Card -->
       <div class="ranking-demo reveal">
         <div class="ranking-demo-header">
           <div class="demo-dot" style="background:#FF5F57"></div>
@@ -1027,256 +758,94 @@ footer{
         </div>
         <div class="ranking-demo-body">
           <div style="font-size:.75rem;color:var(--muted);margin-bottom:1rem;letter-spacing:.5px;text-transform:uppercase;">Posizione: Sales Manager — PMI B2B</div>
-          <div class="candidate-row">
-            <div class="rank-badge rank-1">1°</div>
-            <div class="cand-info">
-              <div class="cand-name">Martina R.</div>
-              <div class="cand-role">6 anni B2B · Bologna</div>
-            </div>
-            <div class="score-bar-wrap">
-              <div class="score-bar"><div class="score-fill" style="width:91%"></div></div>
-              <div class="score-num">91/100</div>
-            </div>
-          </div>
-          <div class="candidate-row">
-            <div class="rank-badge rank-2">2°</div>
-            <div class="cand-info">
-              <div class="cand-name">Lorenzo F.</div>
-              <div class="cand-role">4 anni SaaS · Milano</div>
-            </div>
-            <div class="score-bar-wrap">
-              <div class="score-bar"><div class="score-fill" style="width:84%"></div></div>
-              <div class="score-num">84/100</div>
-            </div>
-          </div>
-          <div class="candidate-row">
-            <div class="rank-badge rank-3">3°</div>
-            <div class="cand-info">
-              <div class="cand-name">Sara T.</div>
-              <div class="cand-role">5 anni retail · Modena</div>
-            </div>
-            <div class="score-bar-wrap">
-              <div class="score-bar"><div class="score-fill" style="width:77%"></div></div>
-              <div class="score-num">77/100</div>
-            </div>
-          </div>
-          <div class="candidate-row" style="opacity:.4">
-            <div class="rank-badge rank-x">—</div>
-            <div class="cand-info">
-              <div class="cand-name rank-out">42 profili eliminati</div>
-              <div class="cand-role">non allineati ai criteri QueMatch</div>
-            </div>
-          </div>
-          <div style="margin-top:1.2rem;padding:1rem;background:rgba(77,184,138,0.06);border-radius:8px;border:1px solid rgba(77,184,138,0.12);">
-            <div style="font-size:.75rem;color:var(--green);font-weight:700;margin-bottom:.3rem;"> RACCOMANDAZIONE</div>
-            <div style="font-size:.82rem;color:rgba(255,255,255,0.65);">Martina R. supera tutti e 4 i filtri. Alta compatibilità culturale con struttura a team ridotto. Disponibile entro 30 giorni.</div>
-          </div>
+          <div class="candidate-row"><div class="rank-badge rank-1">1°</div><div class="cand-info"><div class="cand-name">Martina R.</div><div class="cand-role">6 anni B2B · Bologna</div></div><div class="score-bar-wrap"><div class="score-bar"><div class="score-fill" style="width:91%"></div></div><div class="score-num">91/100</div></div></div>
+          <div class="candidate-row"><div class="rank-badge rank-2">2°</div><div class="cand-info"><div class="cand-name">Lorenzo F.</div><div class="cand-role">4 anni SaaS · Milano</div></div><div class="score-bar-wrap"><div class="score-bar"><div class="score-fill" style="width:84%"></div></div><div class="score-num">84/100</div></div></div>
+          <div class="candidate-row"><div class="rank-badge rank-3">3°</div><div class="cand-info"><div class="cand-name">Sara T.</div><div class="cand-role">5 anni retail · Modena</div></div><div class="score-bar-wrap"><div class="score-bar"><div class="score-fill" style="width:77%"></div></div><div class="score-num">77/100</div></div></div>
+          <div class="candidate-row" style="opacity:.4"><div class="rank-badge rank-x">—</div><div class="cand-info"><div class="cand-name rank-out">42 profili eliminati</div><div class="cand-role">non allineati ai criteri QueMatch</div></div></div>
+          <div style="margin-top:1.2rem;padding:1rem;background:rgba(77,184,138,0.06);border-radius:8px;border:1px solid rgba(77,184,138,0.12);"><div style="font-size:.75rem;color:var(--green);font-weight:700;margin-bottom:.3rem;">RACCOMANDAZIONE</div><div style="font-size:.82rem;color:rgba(255,255,255,0.65);">Martina R. supera tutti e 4 i filtri. Alta compatibilità culturale con struttura a team ridotto. Disponibile entro 30 giorni.</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- INNOVAZIONI QUEMATCH -->
+<!-- INNOVAZIONI -->
 <section class="innovazioni" id="innovazioni">
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:780px;margin:0 auto;">
       <div class="section-label" style="justify-content:center;">Le innovazioni QueMatch</div>
       <h2 class="section-title">Per assunzioni da cecchino.<br><span class="dim">Due strumenti che il recruiting tradizionale non ha.</span></h2>
-
-      <!-- MIRINO ANIMATO SVG -->
       <div class="crosshair-wrap" aria-hidden="true">
         <svg class="crosshair-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <!-- cerchi concentrici -->
           <circle class="ch-ring ch-r1" cx="100" cy="100" r="80" fill="none" stroke="rgba(77,184,138,0.18)" stroke-width="1.5"/>
           <circle class="ch-ring ch-r2" cx="100" cy="100" r="58" fill="none" stroke="rgba(77,184,138,0.28)" stroke-width="1.5"/>
           <circle class="ch-ring ch-r3" cx="100" cy="100" r="36" fill="none" stroke="rgba(77,184,138,0.45)" stroke-width="2"/>
           <circle class="ch-ring ch-r4" cx="100" cy="100" r="14" fill="none" stroke="var(--green)" stroke-width="2.5"/>
-          <!-- punto centrale -->
           <circle class="ch-dot" cx="100" cy="100" r="4" fill="var(--green)"/>
-          <!-- linee a croce — con gap al centro -->
-          <line class="ch-line" x1="100" y1="10"  x2="100" y2="82"  stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
+          <line class="ch-line" x1="100" y1="10" x2="100" y2="82" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
           <line class="ch-line" x1="100" y1="118" x2="100" y2="190" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
-          <line class="ch-line" x1="10"  y1="100" x2="82"  y2="100" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
+          <line class="ch-line" x1="10" y1="100" x2="82" y2="100" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
           <line class="ch-line" x1="118" y1="100" x2="190" y2="100" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round"/>
-          <!-- tacche diagonali agli angoli -->
-          <line class="ch-tick" x1="26" y1="26" x2="38" y2="38" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-          <line class="ch-tick" x1="174" y1="26" x2="162" y2="38" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-          <line class="ch-tick" x1="26" y1="174" x2="38" y2="162" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-          <line class="ch-tick" x1="174" y1="174" x2="162" y2="162" stroke="rgba(77,184,138,0.5)" stroke-width="1.5" stroke-linecap="round"/>
-          <!-- label QueMatch Ranking -->
           <text class="ch-label-top" x="100" y="6" text-anchor="middle" fill="rgba(77,184,138,0.7)" font-family="Plus Jakarta Sans, sans-serif" font-size="6" font-weight="700" letter-spacing="1.5">QUEMATCH RANKING™</text>
-          <text class="ch-label-right" x="196" y="102" text-anchor="end" fill="rgba(77,184,138,0.5)" font-family="Plus Jakarta Sans, sans-serif" font-size="5.5" font-weight="700" letter-spacing="1">RANKING™</text>
           <text class="ch-label-bottom" x="100" y="199" text-anchor="middle" fill="rgba(77,184,138,0.7)" font-family="Plus Jakarta Sans, sans-serif" font-size="6" font-weight="700" letter-spacing="1.5">QUEMATCH RANKING™</text>
-          <text class="ch-label-left" x="4" y="102" text-anchor="start" fill="rgba(77,184,138,0.5)" font-family="Plus Jakarta Sans, sans-serif" font-size="5.5" font-weight="700" letter-spacing="1">RANKING™</text>
         </svg>
       </div>
-
-      <!-- Ripetizione brand orizzontale -->
       <div class="ranking-marquee" aria-hidden="true">
-     
         <span>QueMatch Score™</span><span class="mq-sep">·</span>
         <span>QueMatch Ranking™</span><span class="mq-sep">·</span>
-
-
-        
       </div>
-
-      <p style="color:var(--muted);font-size:1rem;line-height:1.85;margin-top:2rem;">Le agenzie classiche ti mandano CV. QueMatch ti consegna <strong style="color:var(--white);">QueMatch Score™</strong> e <strong style="color:var(--white);">QueMatch Ranking™</strong> — due strumenti proprietari che trasformano una decisione opaca in una scelta supportata da dati, calibrati sulle esigenze uniche della tua azienda.</p>
+      <p style="color:var(--muted);font-size:1rem;line-height:1.85;margin-top:2rem;">Le agenzie classiche ti mandano CV. QueMatch ti consegna <strong style="color:var(--white);">QueMatch Score™</strong> e <strong style="color:var(--white);">QueMatch Ranking™</strong> — due strumenti proprietari che trasformano una decisione opaca in una scelta supportata da dati.</p>
     </div>
-
-    <!-- DUE CARD AFFIANCATE -->
     <div class="inno-split reveal">
-
-      <!-- SCORE -->
       <div class="inno-card inno-score">
-        <div class="inno-card-header">
-          <div class="inno-badge">Strumento 1</div>
-          <h3 class="inno-title">QueMatch Score™</h3>
-          <p class="inno-subtitle">La valutazione assoluta del candidato</p>
-        </div>
+        <div class="inno-card-header"><div class="inno-badge">Strumento 1</div><h3 class="inno-title">QueMatch Score™</h3><p class="inno-subtitle">La valutazione assoluta del candidato</p></div>
         <div class="inno-body">
-          <p class="inno-desc">Ogni candidato riceve un punteggio da 0 a 100, calcolato su quattro dimensioni: competenze tecniche, compatibilità culturale, capacità trasversali e motivazione reale. <strong style="color:var(--white);">Non è un punteggio generico</strong> — è calibrato sulle esigenze specifiche della tua azienda e di quella posizione. Due aziende diverse che cercano lo stesso profilo otterranno Score diversi per lo stesso candidato, perché i parametri sono unici per ogni mandato.</p>
-
-          <div class="inno-vs-box">
-            <div class="inno-vs-item bad">
-              <div class="inno-vs-label">Recruiting tradizionale</div>
-              <div class="inno-vs-text">CV letto in 30 secondi. Giudizio soggettivo del recruiter. Nessuna tracciabilità.</div>
-            </div>
-            <div class="inno-vs-arrow">→</div>
-            <div class="inno-vs-item good">
-              <div class="inno-vs-label">QueMatch Score™</div>
-              <div class="inno-vs-text">Punteggio multidimensionale su 100, contestualizzato sulla tua azienda. Ogni numero ha una motivazione scritta.</div>
-            </div>
-          </div>
-
-          <!-- Score demo mini -->
+          <p class="inno-desc">Ogni candidato riceve un punteggio da 0 a 100, calcolato su quattro dimensioni: competenze tecniche, compatibilità culturale, capacità trasversali e motivazione reale. <strong style="color:var(--white);">Non è un punteggio generico</strong> — è calibrato sulle esigenze specifiche della tua azienda.</p>
+          <div class="inno-vs-box"><div class="inno-vs-item bad"><div class="inno-vs-label">Recruiting tradizionale</div><div class="inno-vs-text">CV letto in 30 secondi. Giudizio soggettivo. Nessuna tracciabilità.</div></div><div class="inno-vs-arrow">→</div><div class="inno-vs-item good"><div class="inno-vs-label">QueMatch Score™</div><div class="inno-vs-text">Punteggio multidimensionale su 100, contestualizzato sulla tua azienda.</div></div></div>
           <div class="score-mini-demo">
             <div class="smd-header">Score calcolato per: <strong>Sales Manager · Acme S.r.l.</strong></div>
             <div class="smd-dims">
-              <div class="smd-dim">
-                <span class="smd-label">Skill Match</span>
-                <div class="smd-bar"><div class="smd-fill" style="width:95%;background:var(--green);"></div></div>
-                <span class="smd-val">95</span>
-              </div>
-              <div class="smd-dim">
-                <span class="smd-label">Cultural Fit</span>
-                <div class="smd-bar"><div class="smd-fill" style="width:88%;background:#6B9FE4;"></div></div>
-                <span class="smd-val">88</span>
-              </div>
-              <div class="smd-dim">
-                <span class="smd-label">Soft Power</span>
-                <div class="smd-bar"><div class="smd-fill" style="width:90%;background:var(--gold);"></div></div>
-                <span class="smd-val">90</span>
-              </div>
-              <div class="smd-dim">
-                <span class="smd-label">Readiness</span>
-                <div class="smd-bar"><div class="smd-fill" style="width:85%;background:var(--green-light);"></div></div>
-                <span class="smd-val">85</span>
-              </div>
+              <div class="smd-dim"><span class="smd-label">Skill Match</span><div class="smd-bar"><div class="smd-fill" style="width:95%;background:var(--green);"></div></div><span class="smd-val">95</span></div>
+              <div class="smd-dim"><span class="smd-label">Cultural Fit</span><div class="smd-bar"><div class="smd-fill" style="width:88%;background:#6B9FE4;"></div></div><span class="smd-val">88</span></div>
+              <div class="smd-dim"><span class="smd-label">Soft Power</span><div class="smd-bar"><div class="smd-fill" style="width:90%;background:var(--gold);"></div></div><span class="smd-val">90</span></div>
+              <div class="smd-dim"><span class="smd-label">Readiness</span><div class="smd-bar"><div class="smd-fill" style="width:85%;background:var(--green-light);"></div></div><span class="smd-val">85</span></div>
             </div>
-            <div class="smd-total">
-              <span class="smd-total-label">QueMatch Score™ finale</span>
-              <span class="smd-total-val">91 / 100</span>
-            </div>
-            <div class="smd-note">Questo score vale solo per Acme S.r.l. — per un altro cliente, lo stesso candidato otterrebbe un punteggio differente.</div>
+            <div class="smd-total"><span class="smd-total-label">QueMatch Score™ finale</span><span class="smd-total-val">91 / 100</span></div>
           </div>
         </div>
       </div>
-
-      <!-- RANKING -->
       <div class="inno-card inno-ranking">
-        <div class="inno-card-header">
-          <div class="inno-badge inno-badge-alt">Strumento 2</div>
-          <h3 class="inno-title">QueMatch Ranking™</h3>
-          <p class="inno-subtitle">La classifica che ti fa partire dal primo</p>
-        </div>
+        <div class="inno-card-header"><div class="inno-badge inno-badge-alt">Strumento 2</div><h3 class="inno-title">QueMatch Ranking™</h3><p class="inno-subtitle">La classifica che ti fa partire dal primo</p></div>
         <div class="inno-body">
-          <p class="inno-desc">Il <strong style="color:var(--white);">QueMatch Ranking™</strong> ordina i candidati della shortlist in una classifica relativa: dal più adatto al meno adatto, per quella posizione, in quel contesto aziendale. <strong style="color:var(--white);">Il risultato è immediato</strong>: sai con chi iniziare, sai chi tenere in riserva, sai chi non chiamare affatto. Il <strong style="color:var(--white);">QueMatch Ranking™</strong> elimina zero colloqui esplorativi inutili e le riunioni di allineamento interno su profili che non andrebbero mai avanti — è la bussola che ti porta al candidato giusto al primo colloquio.</p>
-
-          <div class="inno-vs-box">
-            <div class="inno-vs-item bad">
-              <div class="inno-vs-label">Recruiting tradizionale</div>
-              <div class="inno-vs-text">10 colloqui per trovare 1 persona. Manager e HR che si riuniscono su profili inadatti. Settimane sprecate.</div>
-            </div>
-            <div class="inno-vs-arrow">→</div>
-            <div class="inno-vs-item good">
-              <div class="inno-vs-label">QueMatch Ranking™</div>
-              <div class="inno-vs-text">3–5 profili ordinati per priorità dal QueMatch Ranking™. Parti dal primo. Se va bene, sei già a posto. Se no, hai ancora la lista.</div>
-            </div>
-          </div>
-
-          <!-- Ranking demo mini -->
+          <p class="inno-desc">Il <strong style="color:var(--white);">QueMatch Ranking™</strong> ordina i candidati in una classifica relativa: dal più adatto al meno adatto, per quella posizione, in quel contesto aziendale. <strong style="color:var(--white);">Il risultato è immediato.</strong></p>
+          <div class="inno-vs-box"><div class="inno-vs-item bad"><div class="inno-vs-label">Recruiting tradizionale</div><div class="inno-vs-text">10 colloqui per trovare 1 persona. Settimane sprecate.</div></div><div class="inno-vs-arrow">→</div><div class="inno-vs-item good"><div class="inno-vs-label">QueMatch Ranking™</div><div class="inno-vs-text">3–5 profili ordinati per priorità. Parti dal primo.</div></div></div>
           <div class="rank-mini-demo">
             <div class="smd-header">Ranking shortlist · Sales Manager · Acme S.r.l.</div>
             <div class="rmd-rows">
-              <div class="rmd-row rmd-top">
-                <div class="rmd-pos">1°</div>
-                <div class="rmd-info">
-                  <div class="rmd-name">Martina R.</div>
-                  <div class="rmd-tag">Chiama subito</div>
-                </div>
-                <div class="rmd-score">91</div>
-              </div>
-              <div class="rmd-row rmd-mid">
-                <div class="rmd-pos">2°</div>
-                <div class="rmd-info">
-                  <div class="rmd-name">Lorenzo F.</div>
-                  <div class="rmd-tag">In riserva</div>
-                </div>
-                <div class="rmd-score rmd-score-mid">84</div>
-              </div>
-              <div class="rmd-row rmd-mid">
-                <div class="rmd-pos">3°</div>
-                <div class="rmd-info">
-                  <div class="rmd-name">Sara T.</div>
-                  <div class="rmd-tag">In riserva</div>
-                </div>
-                <div class="rmd-score rmd-score-mid">77</div>
-              </div>
-              <div class="rmd-row rmd-out">
-                <div class="rmd-pos" style="color:var(--muted);">—</div>
-                <div class="rmd-info">
-                  <div class="rmd-name" style="color:rgba(255,255,255,0.3);">42 profili eliminati</div>
-                  <div class="rmd-tag rmd-tag-out">Non allineati · mai mostrati</div>
-                </div>
-                <div class="rmd-score" style="color:rgba(255,255,255,0.15);">—</div>
-              </div>
+              <div class="rmd-row rmd-top"><div class="rmd-pos">1°</div><div class="rmd-info"><div class="rmd-name">Martina R.</div><div class="rmd-tag">Chiama subito</div></div><div class="rmd-score">91</div></div>
+              <div class="rmd-row rmd-mid"><div class="rmd-pos">2°</div><div class="rmd-info"><div class="rmd-name">Lorenzo F.</div><div class="rmd-tag">In riserva</div></div><div class="rmd-score rmd-score-mid">84</div></div>
+              <div class="rmd-row rmd-mid"><div class="rmd-pos">3°</div><div class="rmd-info"><div class="rmd-name">Sara T.</div><div class="rmd-tag">In riserva</div></div><div class="rmd-score rmd-score-mid">77</div></div>
             </div>
-            <div class="smd-note">Parti dal primo. Se Martina firma, il processo è chiuso. Se rinuncia, Lorenzo è già pronto.</div>
+            <div class="smd-note">Parti dal primo. Se Martina firma, il processo è chiuso.</div>
           </div>
         </div>
       </div>
-
     </div>
-
-    <!-- INSIEME COSA FANNO -->
     <div class="inno-together reveal">
       <div class="inno-together-inner">
         <div class="inno-together-text">
           <div class="section-label">Score + Ranking insieme</div>
           <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:1rem;">Il candidato giusto al primo colloquio. Non al decimo.</h3>
-          <p style="color:var(--muted);font-size:.95rem;line-height:1.85;">Il <strong style="color:var(--white);">QueMatch Score™</strong> ti dice quanto vale ogni candidato per te — su misura, non su template. Il <strong style="color:var(--white);">QueMatch Ranking™</strong> ti dice da dove partire. Insieme, <strong style="color:var(--white);">QueMatch Score™</strong> e <strong style="color:var(--white);">QueMatch Ranking™</strong> eliminano il problema più costoso del recruiting: i colloqui inutili, i round infiniti, le settimane perse su profili che non sarebbero mai stati assunti.</p>
+          <p style="color:var(--muted);font-size:.95rem;line-height:1.85;">Il <strong style="color:var(--white);">QueMatch Score™</strong> ti dice quanto vale ogni candidato per te. Il <strong style="color:var(--white);">QueMatch Ranking™</strong> ti dice da dove partire. Insieme eliminano i colloqui inutili, i round infiniti, le settimane perse.</p>
           <a href="#prenota" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Scopri come funziona per la tua azienda →</a>
         </div>
         <div class="inno-together-stats">
-          <div class="its-stat">
-            <div class="its-num">−70%</div>
-            <div class="its-label">colloqui necessari per assumere</div>
-          </div>
-          <div class="its-stat">
-            <div class="its-num">4</div>
-            <div class="its-label">dimensioni valutate per ogni candidato</div>
-          </div>
-          <div class="its-stat">
-            <div class="its-num">0</div>
-            <div class="its-label">template generici — ogni Score è unico</div>
-          </div>
+          <div class="its-stat"><div class="its-num">−70%</div><div class="its-label">colloqui necessari per assumere</div></div>
+          <div class="its-stat"><div class="its-num">4</div><div class="its-label">dimensioni valutate per ogni candidato</div></div>
+          <div class="its-stat"><div class="its-num">0</div><div class="its-label">template generici — ogni Score è unico</div></div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -1284,52 +853,16 @@ footer{
 <section class="vantaggi" id="vantaggi">
   <div class="container">
     <div class="vantaggi-intro">
-      <div class="reveal">
-        <div class="section-label">Perché QueMatch</div>
-        <h2 class="section-title">Assunzioni da<br><span class="dim">cecchino.</span><br>Non a pioggia.</h2>
-      </div>
-      <div class="reveal">
-        <p style="color:var(--muted);font-size:1rem;line-height:1.85;">Le agenzie tradizionali ti inviano CV in quantità sperando che uno funzioni. QueMatch ti invia 3–5 profili già validati, con un punteggio, una spiegazione e una raccomandazione. Tu scegli. Non selezioni.</p>
-        <a href="#prenota" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Parla con un consulente →</a>
-      </div>
+      <div class="reveal"><div class="section-label">Perché QueMatch</div><h2 class="section-title">Assunzioni da<br><span class="dim">cecchino.</span><br>Non a pioggia.</h2></div>
+      <div class="reveal"><p style="color:var(--muted);font-size:1rem;line-height:1.85;">Le agenzie tradizionali ti inviano CV in quantità sperando che uno funzioni. QueMatch ti invia 3–5 profili già validati, con un punteggio, una spiegazione e una raccomandazione. Tu scegli. Non selezioni.</p><a href="#prenota" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Parla con un consulente →</a></div>
     </div>
     <div class="vantaggi-grid">
-      <div class="vantaggio-card reveal">
-        
-        <div class="v-title">Risparmio reale sul costo per hire</div>
-        <div class="v-desc">Meno round di colloqui, meno tempo dei manager, nessun candidato da scartare in fase avanzata. Il costo totale scende drasticamente.</div>
-        <div class="v-num">−70%</div>
-      </div>
-      <div class="vantaggio-card reveal">
-        
-        <div class="v-title">Shortlist in 5 giorni lavorativi</div>
-        <div class="v-desc">Dalla firma del mandato alla prima shortlist commentata. Nessuna attesa di settimane — agiamo con rigore senza sacrificare la qualità.</div>
-        <div class="v-num">5gg</div>
-      </div>
-      <div class="vantaggio-card reveal">
-        
-        <div class="v-title">Precisione psicoattitudinale</div>
-        <div class="v-desc">Francesco Petronio, psicologo del lavoro, supervisionerà ogni assessment. Il QueMatch Ranking™ non è solo tecnico — è umano.</div>
-        <div class="v-num" style="font-size:1.1rem;line-height:1.4;">Skill · Cultura · Soft skills · Motivazione</div>
-      </div>
-      <div class="vantaggio-card reveal">
-        
-        <div class="v-title">Retention elevata a 12 mesi</div>
-        <div class="v-desc">Chi entra con QueMatch resta. Il cultural fit valutato in fase di selezione si traduce in integrazione più rapida e minor turnover.</div>
-        <div class="v-num">87%</div>
-      </div>
-      <div class="vantaggio-card reveal">
-        
-        <div class="v-title">Trasparenza totale sul processo</div>
-        <div class="v-desc">Ogni candidato della shortlist viene consegnato con scheda dettagliata: punteggi per dimensione, note qualitative, segnalazioni di rischio.</div>
-        <div class="v-num">100%</div>
-      </div>
-      <div class="vantaggio-card reveal">
-        
-        <div class="v-title">Garanzia di sostituzione</div>
-        <div class="v-desc">Se il candidato lascia o non supera il periodo di prova, lo sostituiamo. Perché siamo convinti della nostra selezione quanto lo sei tu.</div>
-        <div class="v-num">3 mesi</div>
-      </div>
+      <div class="vantaggio-card reveal"><div class="v-title">Risparmio reale sul costo per hire</div><div class="v-desc">Meno round di colloqui, meno tempo dei manager, nessun candidato da scartare in fase avanzata.</div><div class="v-num">−70%</div></div>
+      <div class="vantaggio-card reveal"><div class="v-title">Shortlist in 5 giorni lavorativi</div><div class="v-desc">Dalla firma del mandato alla prima shortlist commentata. Nessuna attesa di settimane.</div><div class="v-num">5gg</div></div>
+      <div class="vantaggio-card reveal"><div class="v-title">Precisione psicoattitudinale</div><div class="v-desc">Francesco Petronio, psicologo del lavoro, supervisionerà ogni assessment.</div><div class="v-num" style="font-size:1.1rem;line-height:1.4;">Skill · Cultura · Soft skills · Motivazione</div></div>
+      <div class="vantaggio-card reveal"><div class="v-title">Retention elevata a 12 mesi</div><div class="v-desc">Chi entra con QueMatch resta. Il cultural fit valutato in fase di selezione si traduce in integrazione più rapida.</div><div class="v-num">87%</div></div>
+      <div class="vantaggio-card reveal"><div class="v-title">Trasparenza totale sul processo</div><div class="v-desc">Ogni candidato della shortlist: punteggi per dimensione, note qualitative, segnalazioni di rischio.</div><div class="v-num">100%</div></div>
+      <div class="vantaggio-card reveal"><div class="v-title">Garanzia di sostituzione</div><div class="v-desc">Se il candidato lascia o non supera il periodo di prova, lo sostituiamo.</div><div class="v-num">3 mesi</div></div>
     </div>
   </div>
 </section>
@@ -1340,99 +873,67 @@ footer{
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
       <div class="section-label" style="justify-content:center;">Investimento</div>
       <h2 class="section-title">Due piani.<br><span class="dim">Nessuna sorpresa.</span></h2>
-      <p style="color:var(--muted);font-size:.95rem;margin-top:1rem;line-height:1.75;">Paghi solo a successo confermato — quando il candidato firma il contratto. Un servizio a performance: paghi solo se porti a casa il risultato.</p>
+      <p style="color:var(--muted);font-size:.95rem;margin-top:1rem;line-height:1.75;">Paghi solo a successo confermato — quando il candidato firma il contratto.</p>
     </div>
     <div class="pricing-grid">
-      <!-- STARTER -->
       <div class="plan-card reveal">
         <div class="plan-name">Starter</div>
         <div class="plan-title">QueMatch Essential</div>
-        <div class="plan-price">
-          <span class="amount">12%</span>
-          <span class="period"> RAL annua</span>
-        </div>
+        <div class="plan-price"><span class="amount">12%</span><span class="period"> RAL annua</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>Analisi posizione e briefing datore di lavoro</li>
+          <li>Analisi posizione e briefing</li>
           <li>Sourcing multisorgente</li>
           <li>QueMatch Ranking™ <span style="font-size:.75rem;background:rgba(255,255,255,0.08);border-radius:4px;padding:.1rem .4rem;color:var(--muted);">Essential</span></li>
           <li>QueMatch Score™ <span style="font-size:.75rem;background:rgba(255,255,255,0.08);border-radius:4px;padding:.1rem .4rem;color:var(--muted);">Essential</span></li>
-          <li>Garanzia di sostituzione di 90 giorni</li>
+          <li>Garanzia sostituzione 90 giorni</li>
         </ul>
         <a href="#prenota" class="plan-cta plan-cta-outline">Inizia ora</a>
       </div>
-      <!-- PROFESSIONAL -->
       <div class="plan-card featured reveal">
         <div class="plan-featured-badge">Consigliato</div>
         <div class="plan-name">Professional</div>
         <div class="plan-title">QueMatch Premium</div>
-        <div class="plan-price">
-          <span class="amount">18%</span>
-          <span class="period"> RAL annua</span>
-        </div>
+        <div class="plan-price"><span class="amount">18%</span><span class="period"> RAL annua</span></div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li>Analisi posizione e briefing datore di lavoro</li>
+          <li>Analisi posizione e briefing</li>
           <li>Sourcing multisorgente</li>
           <li>QueMatch Ranking™ <span style="font-size:.75rem;background:rgba(77,184,138,0.18);border:1px solid rgba(77,184,138,0.4);border-radius:4px;padding:.1rem .4rem;color:var(--green);font-weight:700;">↑ Premium</span></li>
           <li>QueMatch Score™ <span style="font-size:.75rem;background:rgba(77,184,138,0.18);border:1px solid rgba(77,184,138,0.4);border-radius:4px;padding:.1rem .4rem;color:var(--green);font-weight:700;">↑ Premium</span></li>
-          <li>3 Assessment psicoattitudinali sui candidati</li>
-          <li>Garanzia di sostituzione di 180 giorni</li>
+          <li>3 Assessment psicoattitudinali</li>
+          <li>Garanzia sostituzione 180 giorni</li>
         </ul>
         <a href="#prenota" class="plan-cta plan-cta-primary">Scegli Full Service</a>
       </div>
     </div>
-    <!-- banner 20% credito — valido per entrambi i piani -->
     <div class="reveal" style="max-width:900px;margin:1.5rem auto 0;">
       <div style="background:rgba(77,184,138,0.08);border:1px solid rgba(77,184,138,0.35);border-radius:14px;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;text-align:center;">
         <span style="font-size:1.5rem;">⚡</span>
-        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--green);font-size:.95rem;letter-spacing:.2px;">Sconto Velocità −20%</span>
+        <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:var(--green);font-size:.95rem;">Sconto Velocità −20%</span>
         <span style="color:rgba(255,255,255,0.25);font-size:1.2rem;">·</span>
-        <span style="font-size:.9rem;color:rgba(255,255,255,0.75);line-height:1.5;">Se assumi entro 30 giorni, ottieni un credito del 20% del valore della Success Fee — utilizzabile per le prossime assunzioni. Valido su entrambi i piani.</span>
+        <span style="font-size:.9rem;color:rgba(255,255,255,0.75);line-height:1.5;">Se assumi entro 30 giorni, ottieni un credito del 20% della Success Fee. Valido su entrambi i piani.</span>
       </div>
     </div>
-    <!-- nota bottom -->
     <div class="reveal" style="max-width:900px;margin:2rem auto 0;">
       <div style="background:var(--ink3);border-radius:14px;border:1px solid rgba(77,184,138,0.12);padding:1.4rem 2rem;display:flex;align-items:flex-start;gap:1.2rem;flex-wrap:wrap;">
-        <div style="flex:1;min-width:200px;">
-          <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:800;color:var(--green);letter-spacing:.5px;text-transform:uppercase;margin-bottom:.4rem;">Quota di attivazione</div>
-          <div style="font-size:.88rem;color:rgba(255,255,255,0.7);line-height:1.7;">All'avvio di ogni ricerca è prevista una quota di attivazione di <strong style="color:var(--white);">€ 500</strong>, che fa parte integrante della fee di successo e viene scalata da essa al momento dell'assunzione. Non è un costo aggiuntivo — è un anticipo sulla fee che pagheresti comunque.</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:.5rem;background:rgba(77,184,138,0.08);border:1px solid rgba(77,184,138,0.2);border-radius:10px;padding:.75rem 1.2rem;white-space:nowrap;flex-shrink:0;">
-          <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:900;color:var(--green);">€ 500</span>
-          <span style="font-size:.78rem;color:var(--muted);">anticipato · scalato dalla fee finale</span>
-        </div>
+        <div style="flex:1;min-width:200px;"><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:800;color:var(--green);letter-spacing:.5px;text-transform:uppercase;margin-bottom:.4rem;">Quota di attivazione</div><div style="font-size:.88rem;color:rgba(255,255,255,0.7);line-height:1.7;">All'avvio di ogni ricerca è prevista una quota di attivazione di <strong style="color:var(--white);">€ 500</strong>, scalata dalla fee finale al momento dell'assunzione.</div></div>
+        <div style="display:flex;align-items:center;gap:.5rem;background:rgba(77,184,138,0.08);border:1px solid rgba(77,184,138,0.2);border-radius:10px;padding:.75rem 1.2rem;white-space:nowrap;flex-shrink:0;"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:900;color:var(--green);">€ 500</span><span style="font-size:.78rem;color:var(--muted);">anticipato · scalato dalla fee finale</span></div>
       </div>
-      <p style="font-size:.82rem;color:var(--muted);text-align:center;margin-top:1.2rem;">Hai bisogno di servizi aggiuntivi o di sconti per più ricerche? Scopri gli Extra e le promozioni qui sotto →</p>
     </div>
   </div>
 </section>
 
-<!-- EXTRA SERVICES -->
+<!-- EXTRA -->
 <section class="extras" id="extra">
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
       <div class="section-label" style="justify-content:center;">Servizi Aggiuntivi</div>
       <h2 class="section-title">Extra<br><span class="dim">su misura</span></h2>
-      <p style="color:var(--muted);font-size:.95rem;margin-top:1rem;line-height:1.75;">Potenzia la tua selezione con servizi opzionali acquistabili su qualsiasi piano, in qualsiasi momento.</p>
     </div>
     <div class="extras-grid">
-      <div class="extra-card reveal">
-        
-        <div class="extra-body">
-          <h4>Assessment psicoattitudinale aggiuntivo</h4>
-          <p>Valutazione psicoattitudinale approfondita di un candidato extra oltre i 3 inclusi nel Full Service. Ideale per ruoli chiave o posizioni senior dove serve massima certezza.</p>
-          <div class="extra-price">€ 290 <span>/ candidato aggiuntivo</span></div>
-        </div>
-      </div>
-      <div class="extra-card reveal">
-        
-        <div class="extra-body">
-          <h4>Garanzia 365 giorni</h4>
-          <p>Estende la garanzia di sostituzione a 365 giorni dall'assunzione. In caso di dimissioni o mancato superamento del periodo di prova, riprendiamo la ricerca senza costi aggiuntivi oltre al +3% già incluso.</p>
-          <div class="extra-price">+3% <span>sulla fee di successo</span></div>
-        </div>
-      </div>
+      <div class="extra-card reveal"><div class="extra-body"><h4>Assessment psicoattitudinale aggiuntivo</h4><p>Valutazione approfondita di un candidato extra oltre i 3 inclusi nel Full Service.</p><div class="extra-price">€ 290 <span>/ candidato aggiuntivo</span></div></div></div>
+      <div class="extra-card reveal"><div class="extra-body"><h4>Garanzia 365 giorni</h4><p>Estende la garanzia di sostituzione a 365 giorni dall'assunzione.</p><div class="extra-price">+3% <span>sulla fee di successo</span></div></div></div>
     </div>
   </div>
 </section>
@@ -1443,25 +944,12 @@ footer{
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
       <div class="section-label" style="justify-content:center;">Promozioni</div>
       <h2 class="section-title">Hai fretta<br><span class="dim">o stai crescendo?</span></h2>
-      <p style="color:var(--muted);font-size:.95rem;margin-top:1rem;line-height:1.75;">Due incentivi concreti per chi usa QueMatch in modo continuativo o decide velocemente.</p>
     </div>
     <div class="sconti-grid">
-      <div class="sconto-card reveal">
-        <div class="sconto-badge">Sconto Volume</div>
-        <div class="sconto-perc">−15%</div>
-        <h4>3 o più ricerche nello stesso anno</h4>
-        <p>Se affidi a QueMatch 3 o più posizioni nell'arco di 12 mesi, la fee di successo viene ridotta del 15%. Lo sconto si applica dalla terza ricerca in poi. È cumulabile con lo sconto per assunzione rapida.</p>
-        <div class="sconto-cond">Valido su entrambi i piani · Cumulabile con lo sconto velocità · Dalla terza ricerca in poi.</div>
-      </div>
-      <div class="sconto-card reveal">
-        <div class="sconto-badge">Sconto Velocità</div>
-        <div class="sconto-perc">−20%</div>
-        <h4>Assumi entro 30 giorni dal mandato</h4>
-        <p>Se assumi il candidato entro 30 giorni dall'inizio della ricerca, ottieni un credito del 20% sulla fee di successo (piano Essential), applicabile sulla prossima ricerca con QueMatch, oppure uno sconto immediato del 20% sulla stessa fee (piano Full Service). La rapidità decisionale merita di essere premiata.</p>
-        <div class="sconto-cond">Valido su entrambi i piani · Cumulabile con lo sconto volume · Credito utilizzabile dalla ricerca successiva</div>
-      </div>
+      <div class="sconto-card reveal"><div class="sconto-badge">Sconto Volume</div><div class="sconto-perc">−15%</div><h4>3 o più ricerche nello stesso anno</h4><p>Se affidi a QueMatch 3 o più posizioni nell'arco di 12 mesi, la fee viene ridotta del 15%. Cumulabile con lo sconto velocità.</p><div class="sconto-cond">Dalla terza ricerca in poi · Valido su entrambi i piani</div></div>
+      <div class="sconto-card reveal"><div class="sconto-badge">Sconto Velocità</div><div class="sconto-perc">−20%</div><h4>Assumi entro 30 giorni dal mandato</h4><p>Credito del 20% sulla fee di successo, utilizzabile sulla prossima ricerca (Essential) o sconto immediato (Premium).</p><div class="sconto-cond">Valido su entrambi i piani · Cumulabile con lo sconto volume</div></div>
     </div>
-    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIANZE -->
@@ -1472,39 +960,9 @@ footer{
       <h2 class="section-title">Risultati<br><span class="dim">che parlano chiaro</span></h2>
     </div>
     <div class="testimonial-grid">
-      <div class="testi-card reveal">
-        <div class="testi-quote">"</div>
-        <p class="testi-text">Siamo una PMI con risorse limitate — ogni inserimento sbagliato pesa. Con QueMatch abbiamo ricevuto tre profili seri, tutti in linea con quello che cercavamo. Abbiamo assunto al primo colloquio.</p>
-        <div class="testi-author">
-          <div class="testi-av">MG</div>
-          <div>
-            <div class="testi-name">Marco G.</div>
-            <div class="testi-company">Titolare · Azienda metalmeccanica, Ferrara</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-quote">"</div>
-        <p class="testi-text">Mi aspettavo la solita lista di CV. Invece ho ricevuto una scheda dettagliata per ogni candidato, con i punti di forza e le note sui valori. La scelta è stata molto più semplice del solito.</p>
-        <div class="testi-author">
-          <div class="testi-av">LB</div>
-          <div>
-            <div class="testi-name">Laura B.</div>
-            <div class="testi-company">Responsabile HR · Studio professionale, Bologna</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-quote">"</div>
-        <p class="testi-text">Non avevo tempo da perdere in screening. QueMatch ha gestito tutta la fase iniziale e mi ha passato solo i profili già qualificati. Ho apprezzato soprattutto la trasparenza: sapevo esattamente perché ogni candidato era stato selezionato.</p>
-        <div class="testi-author">
-          <div class="testi-av">AS</div>
-          <div>
-            <div class="testi-name">Andrea S.</div>
-            <div class="testi-company">Direttore Operativo · PMI distribuzione, Forlì</div>
-          </div>
-        </div>
-      </div>
+      <div class="testi-card reveal"><div class="testi-quote">"</div><p class="testi-text">Siamo una PMI con risorse limitate — ogni inserimento sbagliato pesa. Con QueMatch abbiamo ricevuto tre profili seri, tutti in linea con quello che cercavamo. Abbiamo assunto al primo colloquio.</p><div class="testi-author"><div class="testi-av">MG</div><div><div class="testi-name">Marco G.</div><div class="testi-company">Titolare · Azienda metalmeccanica, Ferrara</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-quote">"</div><p class="testi-text">Mi aspettavo la solita lista di CV. Invece ho ricevuto una scheda dettagliata per ogni candidato, con i punti di forza e le note sui valori. La scelta è stata molto più semplice del solito.</p><div class="testi-author"><div class="testi-av">LB</div><div><div class="testi-name">Laura B.</div><div class="testi-company">Responsabile HR · Studio professionale, Bologna</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-quote">"</div><p class="testi-text">Non avevo tempo da perdere in screening. QueMatch ha gestito tutta la fase iniziale e mi ha passato solo i profili già qualificati. Sapevo esattamente perché ogni candidato era stato selezionato.</p><div class="testi-author"><div class="testi-av">AS</div><div><div class="testi-name">Andrea S.</div><div class="testi-company">Direttore Operativo · PMI distribuzione, Forlì</div></div></div></div>
     </div>
   </div>
 </section>
@@ -1515,89 +973,43 @@ footer{
     <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
       <div class="section-label" style="justify-content:center;">Chi siamo</div>
       <h2 class="section-title">Due discipline.<br><span class="dim">Un obiettivo.</span></h2>
-      <p style="color:var(--muted);font-size:.95rem;margin-top:1rem;line-height:1.75;">QueMatch nasce dall'unione di psicologia del lavoro e strategia d'impresa. Non siamo recruiter tradizionali — siamo esperti dei due lati del tavolo.</p>
+      <p style="color:var(--muted);font-size:.95rem;margin-top:1rem;line-height:1.75;">QueMatch nasce dall'unione di psicologia del lavoro e strategia d'impresa.</p>
     </div>
     <div class="team-grid">
-      <div class="team-card reveal">
-        <div class="team-avatar avatar-fp">FP</div>
-        <div class="team-name">Francesco Petronio</div>
-        <div class="team-role">Co-ideatore di QueMatch</div>
-        <div class="team-spec">Psicologo · Esperto di Recruiting</div>
-        <p class="team-bio">Psicologo con anni di esperienza nel recruiting e nella valutazione del potenziale umano. Ha sviluppato la componente psicoattitudinale del QueMatch Ranking™, progettando gli assessment delle competenze trasversali e del cultural fit. Porta nelle selezioni una profondità di analisi che i tool tradizionali non possono replicare.</p>
-        <a href="https://francescopetronio.it" target="_blank" class="team-link">
-          francescopetronio.it →
-        </a>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-avatar avatar-lm">LM</div>
-        <div class="team-name">Luca Morozzi</div>
-        <div class="team-role">Co-ideatore di QueMatch</div>
-        <div class="team-spec">Esperto Fintech · Stratega d'Impresa</div>
-        <p class="team-bio">Imprenditore e professionista fintech con esperienza nella strutturazione di modelli di business e nell'analisi del valore d'impresa. Ha progettato l'architettura economica di QueMatch, il modello a successo e la logica di pricing, portando una visione orientata al ROI concreto per ogni azienda cliente.</p>
-        <a href="https://lucamorozzi.it" target="_blank" class="team-link">
-          lucamorozzi.it →
-        </a>
-      </div>
+      <div class="team-card reveal"><div class="team-avatar avatar-fp">FP</div><div class="team-name">Francesco Petronio</div><div class="team-role">Co-ideatore di QueMatch</div><div class="team-spec">Psicologo · Esperto di Recruiting</div><p class="team-bio">Psicologo con anni di esperienza nel recruiting e nella valutazione del potenziale umano. Ha sviluppato la componente psicoattitudinale del QueMatch Ranking™.</p><a href="https://francescopetronio.it" target="_blank" class="team-link">francescopetronio.it →</a></div>
+      <div class="team-card reveal"><div class="team-avatar avatar-lm">LM</div><div class="team-name">Luca Morozzi</div><div class="team-role">Co-ideatore di QueMatch</div><div class="team-spec">Esperto Fintech · Stratega d'Impresa</div><p class="team-bio">Imprenditore e professionista fintech con esperienza nella strutturazione di modelli di business. Ha progettato l'architettura economica di QueMatch.</p><a href="https://lucamorozzi.it" target="_blank" class="team-link">lucamorozzi.it →</a></div>
     </div>
     <div class="reveal" style="text-align:center;margin-top:3rem;padding:2rem;background:var(--ink2);border-radius:16px;border:1px solid rgba(77,184,138,0.1);max-width:600px;margin-left:auto;margin-right:auto;">
-      <div style="font-size:1rem;color:var(--muted);line-height:1.8;">QueMatch è sviluppato all'interno di <strong style="color:var(--white);">Giamor Group S.r.l.</strong>, startup innovativa con sede in Emilia-Romagna, specializzata in servizi digitali e professionali per imprese.</div>
+      <div style="font-size:1rem;color:var(--muted);line-height:1.8;">QueMatch è sviluppato all'interno di <strong style="color:var(--white);">Giamor Group S.r.l.</strong>, startup innovativa con sede in Emilia-Romagna.</div>
     </div>
   </div>
 </section>
 
-<!-- PRENOTA APPUNTAMENTO -->
+<!-- PRENOTA -->
 <section class="booking" id="prenota">
   <div class="booking-inner">
     <div class="reveal">
       <div class="section-label" style="justify-content:center;">Prenota</div>
       <h2 class="section-title">Parliamoci.<br><span class="dim">Gratis. Senza impegno.</span></h2>
-      <p>Una chiamata di 30 minuti per capire la tua esigenza, analizzare la posizione aperta e dirti subito se e come QueMatch può aiutarti. Nessuna pressione commerciale.</p>
+      <p>Una chiamata di 30 minuti per capire la tua esigenza e dirti subito se e come QueMatch può aiutarti.</p>
     </div>
     <div class="booking-form reveal">
       <div class="form-row">
-        <div class="form-group">
-          <label>Nome e Cognome *</label>
-          <input id="qm-nome" type="text" placeholder="Mario Rossi">
-        </div>
-        <div class="form-group">
-          <label>Email aziendale *</label>
-          <input id="qm-email" type="email" placeholder="mario@azienda.it">
-        </div>
+        <div class="form-group"><label>Nome e Cognome *</label><input id="qm-nome" type="text" placeholder="Mario Rossi"></div>
+        <div class="form-group"><label>Email aziendale *</label><input id="qm-email" type="email" placeholder="mario@azienda.it"></div>
       </div>
       <div class="form-row">
-        <div class="form-group">
-          <label>Azienda</label>
-          <input id="qm-azienda" type="text" placeholder="Nome azienda">
-        </div>
-        <div class="form-group">
-          <label>Telefono</label>
-          <input id="qm-telefono" type="tel" placeholder="+39 333 000 0000">
-        </div>
+        <div class="form-group"><label>Azienda</label><input id="qm-azienda" type="text" placeholder="Nome azienda"></div>
+        <div class="form-group"><label>Telefono</label><input id="qm-telefono" type="tel" placeholder="+39 333 000 0000"></div>
       </div>
       <div class="form-row">
-        <div class="form-group">
-          <label>Posizione da coprire</label>
-          <input id="qm-posizione" type="text" placeholder="es. Responsabile Commerciale, Developer, ...">
-        </div>
-        <div class="form-group">
-          <label>Urgenza</label>
-          <select id="qm-urgenza">
-            <option>Entro 2 settimane</option>
-            <option>Entro 1 mese</option>
-            <option>Entro 2-3 mesi</option>
-            <option>Stiamo valutando</option>
-          </select>
-        </div>
+        <div class="form-group"><label>Posizione da coprire</label><input id="qm-posizione" type="text" placeholder="es. Responsabile Commerciale, Developer, ..."></div>
+        <div class="form-group"><label>Urgenza</label><select id="qm-urgenza"><option>Entro 2 settimane</option><option>Entro 1 mese</option><option>Entro 2-3 mesi</option><option>Stiamo valutando</option></select></div>
       </div>
-      <div class="form-group full">
-        <label>Note aggiuntive (facoltativo)</label>
-        <textarea id="qm-note" placeholder="Raccontaci brevemente la posizione, il contesto aziendale o qualsiasi dettaglio utile..."></textarea>
-      </div>
+      <div class="form-group full"><label>Note aggiuntive (facoltativo)</label><textarea id="qm-note" placeholder="Raccontaci brevemente la posizione, il contesto aziendale o qualsiasi dettaglio utile..."></textarea></div>
       <button class="form-submit" id="qm-submit">Prenota la Chiamata Gratuita →</button>
     </div>
-    <div class="booking-alt">
-      Preferisci scrivere? <a href="mailto:info@quematch.it">info@quematch.it</a> · Risposta garantita entro 4h lavorative.
-    </div>
+    <div class="booking-alt">Preferisci scrivere? <a href="mailto:info@quematch.it">info@quematch.it</a> · Risposta garantita entro 4h lavorative.</div>
   </div>
 </section>
 
@@ -1609,48 +1021,12 @@ footer{
       <h2 class="section-title">Togliti i dubbi<br><span class="dim">più comuni.</span></h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Come funziona esattamente il pagamento a successo?
-          <div class="faq-arrow"></div>
-        </div>
-        <div class="faq-answer">QueMatch è un servizio a performance: la fee di successo (12% o 18% della RAL) si attiva solo al momento in cui il candidato selezionato firma il contratto con la tua azienda. Prima di quel momento non corri rischi economici legati alla ricerca in sé.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Quanto tempo ci vuole per ricevere la prima shortlist?
-          <div class="faq-arrow"></div>
-        </div>
-        <div class="faq-answer">5 giorni lavorativi dalla firma del mandato e dal completamento del briefing. Per posizioni senior o molto specializzate, il tempo può estendersi a 10 giorni lavorativi — ma ti avvisiamo sempre in anticipo.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Cosa succede se il candidato assunto lascia entro il periodo di garanzia?
-          <div class="faq-arrow"></div>
-        </div>
-        <div class="faq-answer">Ripartiamo con una nuova ricerca. La garanzia varia da 90 a 180 giorni a seconda del piano scelto, estendibile a 365 giorni con il servizio opzionale (+3% sulla fee). In quel caso la nuova ricerca non ha costi aggiuntivi.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Operate solo in Emilia-Romagna?
-          <div class="faq-arrow"></div>
-        </div>
-        <div class="faq-answer">No. Lavoriamo su tutto il territorio italiano e per posizioni in modalità remota o ibrida. Abbiamo una base forte in Emilia-Romagna ma il sourcing e la rete di candidati è nazionale.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Il QueMatch Ranking™ come si differenzia da altri test di personalità?
-          <div class="faq-arrow"></div>
-        </div>
-        <div class="faq-answer">Non è un test standardizzato. È un sistema multidimensionale calibrato sulla posizione specifica e sull'azienda cliente, sviluppato da uno psicologo del lavoro. Considera la compatibilità contestuale, non il profilo astratto del candidato.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Posso usare QueMatch per più posizioni contemporaneamente?
-          <div class="faq-arrow"></div>
-        </div>
-        <div class="faq-answer">Sì. Per 3 o più posizioni attive contemporaneamente, attivare lo sconto volume è particolarmente vantaggioso. Contattaci per valutare insieme la soluzione più adatta alle tue esigenze.</div>
-      </div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Come funziona esattamente il pagamento a successo?<div class="faq-arrow">▾</div></div><div class="faq-answer">QueMatch è un servizio a performance: la fee di successo (12% o 18% della RAL) si attiva solo al momento in cui il candidato firma il contratto con la tua azienda.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Quanto tempo ci vuole per ricevere la prima shortlist?<div class="faq-arrow">▾</div></div><div class="faq-answer">5 giorni lavorativi dalla firma del mandato. Per posizioni senior o molto specializzate, il tempo può estendersi a 10 giorni lavorativi.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Cosa succede se il candidato lascia entro il periodo di garanzia?<div class="faq-arrow">▾</div></div><div class="faq-answer">Ripartiamo con una nuova ricerca senza costi aggiuntivi. La garanzia varia da 90 a 180 giorni, estendibile a 365 con il servizio opzionale (+3%).</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Operate solo in Emilia-Romagna?<div class="faq-arrow">▾</div></div><div class="faq-answer">No. Lavoriamo su tutto il territorio italiano e per posizioni remote o ibride.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Il QueMatch Ranking™ come si differenzia da altri test di personalità?<div class="faq-arrow">▾</div></div><div class="faq-answer">Non è un test standardizzato. È un sistema multidimensionale calibrato sulla posizione specifica e sull'azienda cliente, sviluppato da uno psicologo del lavoro.</div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">Posso usare QueMatch per più posizioni contemporaneamente?<div class="faq-arrow">▾</div></div><div class="faq-answer">Sì. Per 3 o più posizioni attive contemporaneamente lo sconto volume è particolarmente vantaggioso. Contattaci per valutare la soluzione più adatta.</div></div>
     </div>
   </div>
 </section>
@@ -1659,14 +1035,10 @@ footer{
 <footer>
   <div class="footer-inner">
     <div>
-      <a href="#" class="footer-logo">
-        <div class="footer-logo-icon">Q</div>
-        <span class="footer-logo-text">Que<span>Match</span></span>
-      </a>
+      <a href="#" class="footer-logo"><div class="footer-logo-icon">Q</div><span class="footer-logo-text">Que<span>Match</span></span></a>
       <div class="footer-tagline">Un servizio Giamor Group S.r.l. · P.IVA in intestazione</div>
     </div>
     <div class="footer-links">
-      <a href="#metodologia">Metodologia</a>
       <a href="#vantaggi">Vantaggi</a>
       <a href="#pricing">Prezzi</a>
       <a href="#team">Chi siamo</a>
@@ -1680,14 +1052,9 @@ footer{
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 // ─── EmailJS Config ───────────────────────────────────────────────────────────
-// 1. Vai su https://www.emailjs.com/ e crea un account gratuito
-// 2. Crea un "Email Service" (Gmail, SMTP, ecc.) → copia il SERVICE_ID
-// 3. Crea un "Email Template" con le variabili sotto → copia il TEMPLATE_ID
-// 4. Vai su Account > API Keys → copia la PUBLIC_KEY
-// 5. Sostituisci i tre valori qui sotto con i tuoi reali
-const EMAILJS_SERVICE_ID  = 'service_kwmchtm';   // es. 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'template_tb8rhfr';  // es. 'template_xyz456'
-const EMAILJS_PUBLIC_KEY  = 'ikixzONAnrFOfzdtp';   // es. 'xAbCdEfGhIjK'
+const EMAILJS_SERVICE_ID  = 'service_kwmchtm';
+const EMAILJS_TEMPLATE_ID = 'template_tb8rhfr';
+const EMAILJS_PUBLIC_KEY  = 'ikixzONAnrFOfzdtp';
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
@@ -1701,71 +1068,49 @@ function toggleFaq(el) {
 
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); }
-  });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Score bars animation
-const scoreObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.score-fill, .ex-dim-fill').forEach(bar => {
-        const w = bar.style.width;
-        bar.style.width = '0';
-        setTimeout(() => { bar.style.width = w; }, 100);
-      });
-      scoreObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('.ranking-demo-body, .example-candidate').forEach(el => scoreObs.observe(el));
-
-// Nav scroll effect
+// Nav scroll
 window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  if (window.scrollY > 80) {
-    nav.style.background = 'rgba(13,15,18,0.97)';
-  } else {
-    nav.style.background = 'rgba(13,15,18,0.85)';
-  }
+  document.querySelector('nav').style.background =
+    window.scrollY > 80 ? 'rgba(13,15,18,0.97)' : 'rgba(13,15,18,0.85)';
 });
 
-// ─── Form Submit con EmailJS ──────────────────────────────────────────────────
+// ─── Form Submit ──────────────────────────────────────────────────────────────
 document.getElementById('qm-submit').addEventListener('click', async function() {
-  const nome     = document.getElementById('qm-nome').value.trim();
-  const email    = document.getElementById('qm-email').value.trim();
-  const azienda  = document.getElementById('qm-azienda').value.trim();
-  const telefono = document.getElementById('qm-telefono').value.trim();
-  const posizione= document.getElementById('qm-posizione').value.trim();
-  const urgenza  = document.getElementById('qm-urgenza').value;
-  const note     = document.getElementById('qm-note').value.trim();
+  const nome      = document.getElementById('qm-nome').value.trim();
+  const email     = document.getElementById('qm-email').value.trim();
+  const azienda   = document.getElementById('qm-azienda').value.trim();
+  const telefono  = document.getElementById('qm-telefono').value.trim();
+  const posizione = document.getElementById('qm-posizione').value.trim();
+  const urgenza   = document.getElementById('qm-urgenza').value;
+  const nota      = document.getElementById('qm-nota').value.trim();
 
-  if (!nome) { alert('Inserisci il tuo nome per procedere.'); return; }
+  if (!nome)  { alert('Inserisci il tuo nome per procedere.'); return; }
   if (!email) { alert('Inserisci la tua email aziendale.'); return; }
 
   const btn = this;
   btn.textContent = 'Invio in corso...';
   btn.disabled = true;
 
+  // ⚠️ I nomi delle variabili corrispondono ESATTAMENTE ai placeholder del template EmailJS
   const templateParams = {
-    to_email:   'info@quematch.it',
-    from_name:  nome,
-    from_email: email,
-    azienda:    azienda  || '(non specificata)',
-    telefono:   telefono || '(non specificato)',
-    posizione:  posizione|| '(non specificata)',
-    urgenza:    urgenza,
-    note:       note     || '(nessuna nota)',
-    data_ora:   new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' }),
+    'Nome e Cognome':      nome,
+    'Email aziendale':     email,
+    'Azienda':             azienda   || '(non specificata)',
+    'Telefono':            telefono  || '(non specificato)',
+    'Posizione da coprire': posizione || '(non specificata)',
+    'Urgenza':             urgenza,
+    'Note aggiuntive':     note      || '(nessuna nota)',
+    'tempo':               new Date().toLocaleString('it-IT', { timeZone: 'Europe/Rome' }),
   };
 
   try {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
     btn.textContent = '✓ Richiesta inviata — ti contatteremo entro 4h lavorative';
     btn.style.background = 'var(--green-dark)';
-    // Reset form
     ['qm-nome','qm-email','qm-azienda','qm-telefono','qm-posizione','qm-note'].forEach(id => {
       document.getElementById(id).value = '';
     });
