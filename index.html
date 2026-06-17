@@ -2004,7 +2004,7 @@ footer{
       <a href="#casi">Casi di successo</a>
       <a href="#faq">FAQ</a>
       <a href="#contatti">Contatti</a>
-      <a href="#">Privacy Policy</a>
+      <a href="#" id="ppLink" onclick="openPrivacy(event)">Privacy Policy</a>
     </div>
     <div class="footer-copy">© 2026 QueMatch · Tutti i diritti riservati</div>
   </div>
@@ -2058,6 +2058,91 @@ function updateActive(){
 }
 window.addEventListener('scroll', updateActive);
 updateActive();
+</script>
+
+<!-- PRIVACY POLICY MODAL -->
+<style>
+.pp-overlay{position:fixed;inset:0;background:rgba(5,7,10,0.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:3000;padding:1.2rem;}
+.pp-overlay.open{display:flex;}
+.pp-card{background:var(--ink2);border:1px solid var(--ink3);border-radius:18px;width:100%;max-width:780px;max-height:86vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6);animation:ppin .25s ease;}
+@keyframes ppin{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.pp-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding:1.4rem 1.7rem 1.05rem;border-bottom:1px solid var(--ink3);}
+.pp-head h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:var(--white);margin:0;line-height:1.2;}
+.pp-head .pp-sub{font-size:.76rem;color:var(--muted);margin-top:.35rem;line-height:1.5;}
+.pp-close{flex:none;width:34px;height:34px;border-radius:9px;border:1px solid var(--ink3);background:transparent;color:var(--muted);font-size:1.25rem;line-height:1;cursor:pointer;transition:all .2s;}
+.pp-close:hover{color:var(--white);border-color:var(--green);}
+.pp-body{padding:1.35rem 1.7rem 1.7rem;overflow-y:auto;}
+.pp-body h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:.92rem;font-weight:700;color:var(--green);margin:1.35rem 0 .4rem;}
+.pp-body h3:first-child{margin-top:0;}
+.pp-body p,.pp-body li{font-size:.855rem;color:#C7D0DC;line-height:1.72;}
+.pp-body p{margin:0 0 .5rem;}
+.pp-body strong{color:var(--white);font-weight:600;}
+.pp-body a{color:var(--green);text-decoration:none;}
+.pp-body a:hover{text-decoration:underline;}
+.pp-body ul{margin:.25rem 0 .65rem;padding-left:1.15rem;}
+.pp-body li{margin-bottom:.3rem;}
+.pp-note{font-size:.77rem;color:var(--muted);margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--ink3);line-height:1.6;}
+</style>
+<div class="pp-overlay" id="ppOverlay" role="dialog" aria-modal="true" aria-labelledby="ppTitle">
+  <div class="pp-card">
+    <div class="pp-head">
+      <div>
+        <h2 id="ppTitle">Informativa sulla privacy</h2>
+        <div class="pp-sub">Sito quematch.it · ai sensi degli artt. 13-14 del Regolamento (UE) 2016/679 (GDPR) e del D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018</div>
+      </div>
+      <button class="pp-close" onclick="closePrivacy()" aria-label="Chiudi">&times;</button>
+    </div>
+    <div class="pp-body">
+
+      <h3>1. Titolare del trattamento</h3>
+      <p>Il titolare del trattamento dei dati personali è <strong>Francesco Petronio</strong>. Per qualsiasi richiesta relativa ai tuoi dati puoi scrivere a <a href="mailto:info@quematch.it">info@quematch.it</a>.</p>
+
+      <h3>2. Questo sito non raccoglie i tuoi dati</h3>
+      <p>quematch.it &egrave; un sito <strong>puramente informativo (vetrina)</strong>. Non contiene moduli di contatto o di registrazione, non richiede l&rsquo;inserimento di dati personali, non crea account, <strong>non profila i visitatori</strong> e non effettua alcun tracciamento a fini statistici, pubblicitari o di marketing.</p>
+
+      <h3>3. Cookie</h3>
+      <p>Il sito <strong>non installa cookie</strong>: n&eacute; di profilazione, n&eacute; analitici, n&eacute; di marketing. Per questo motivo non &egrave; presente alcun banner di consenso &mdash; semplicemente non c&rsquo;&egrave; nulla da consentire.</p>
+
+      <h3>4. Font e risorse di terze parti</h3>
+      <p>Per la resa grafica, il sito carica i caratteri tipografici dal servizio <strong>Google Fonts</strong> (Google Ireland Ltd.). Per erogare i font, Google riceve automaticamente l&rsquo;<strong>indirizzo IP</strong> del visitatore: &egrave; un dato tecnico necessario alla corretta visualizzazione della pagina, trattato sulla base del <strong>legittimo interesse</strong> (art. 6.1.f GDPR) alla resa del sito, senza alcuna profilazione. Informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+      <h3>5. Log tecnici del server</h3>
+      <p>Come ogni sito web, il fornitore di hosting pu&ograve; registrare <strong>log tecnici</strong> (indirizzo IP, data e ora della richiesta, tipo di browser) per la sola erogazione e sicurezza del servizio e per il tempo strettamente necessario. Questi dati non vengono utilizzati da QueMatch per identificare i visitatori n&eacute; per alcuna finalit&agrave; commerciale.</p>
+
+      <h3>6. Quando ci contatti</h3>
+      <p>Se scegli di contattarci, tratteremo soltanto i dati che ci fornisci <strong>spontaneamente</strong> (es. nome, recapiti, contenuto del messaggio), al solo fine di rispondere e dare seguito alla tua richiesta. Base giuridica: riscontro a una tua richiesta e adozione di misure precontrattuali (art. 6.1.b GDPR). Il conferimento &egrave; facoltativo, ma necessario per ricevere risposta.</p>
+      <ul>
+        <li><strong>Email</strong> (<a href="mailto:info@quematch.it">info@quematch.it</a>) <strong>e telefono</strong>: i dati transitano sui sistemi del relativo fornitore di servizi.</li>
+        <li><strong>WhatsApp</strong>: la conversazione avviene sulla piattaforma di WhatsApp / Meta Platforms Ireland Ltd., secondo la relativa <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">informativa</a>. Se preferisci non usare canali di terze parti, puoi sempre scriverci via email.</li>
+      </ul>
+
+      <h3>7. Comunicazione e diffusione</h3>
+      <p>I tuoi dati <strong>non vengono diffusi n&eacute; ceduti a terzi</strong> per finalit&agrave; commerciali. Possono essere trattati da soggetti che ci forniscono servizi tecnici (es. posta elettronica, hosting), nominati responsabili del trattamento ai sensi dell&rsquo;art. 28 GDPR.</p>
+
+      <h3>8. Trasferimenti fuori dall&rsquo;Unione Europea</h3>
+      <p>Alcuni fornitori (es. Google, Meta) possono trattare dati anche al di fuori dello Spazio Economico Europeo. In tal caso il trasferimento avviene sulla base delle garanzie previste dagli artt. 44 e seguenti del GDPR (es. Clausole Contrattuali Standard).</p>
+
+      <h3>9. Conservazione</h3>
+      <p>I dati eventualmente raccolti tramite i contatti sono conservati per il <strong>tempo necessario</strong> a gestire la tua richiesta e ad assolvere eventuali obblighi di legge, dopodich&eacute; vengono cancellati.</p>
+
+      <h3>10. I tuoi diritti</h3>
+      <p>In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15-22 del GDPR: <strong>accesso, rettifica, cancellazione, limitazione, opposizione e portabilit&agrave;</strong>, oltre alla revoca del consenso ove prestato. Per esercitarli scrivi a <a href="mailto:info@quematch.it">info@quematch.it</a>.</p>
+
+      <h3>11. Reclamo all&rsquo;Autorit&agrave;</h3>
+      <p>Se ritieni che il trattamento dei tuoi dati violi la normativa, hai diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">garanteprivacy.it</a>).</p>
+
+      <h3>12. Aggiornamenti</h3>
+      <p>La presente informativa pu&ograve; essere aggiornata nel tempo; eventuali modifiche saranno pubblicate su questa pagina.</p>
+
+      <div class="pp-note">Ultimo aggiornamento: giugno 2026 &middot; Titolare del trattamento: Francesco Petronio</div>
+    </div>
+  </div>
+</div>
+<script>
+function openPrivacy(e){ if(e&&e.preventDefault)e.preventDefault(); document.getElementById('ppOverlay').classList.add('open'); document.body.style.overflow='hidden'; }
+function closePrivacy(){ document.getElementById('ppOverlay').classList.remove('open'); document.body.style.overflow=''; }
+document.getElementById('ppOverlay').addEventListener('click',function(ev){ if(ev.target===this) closePrivacy(); });
+document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') closePrivacy(); });
 </script>
 </body>
 </html>
